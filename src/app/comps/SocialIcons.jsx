@@ -6,25 +6,26 @@ export default function SocialIcons() {
   return (
    
     <ul className='flex items-center gap-x-5'>
-        <li>
+        <div className='hover:text-white p-2 rounded-full border'>
             <Link href="/">
             <FaGithub/>
             </Link>
-        </li>
+        </div>
 
-        <li>
-        <Link href="/">
+        <div className='hover:text-white p-2 border-red-500 hover:border-red-400 hover:bg-red-400 rounded-full border'>
+        <Link href="https://www.instagram.com/officialalgebra905/">
         <FaInstagram
-        /></Link></li>
+        /></Link></div>
 
-        <li>
+        <div className='hover:text-white p-2 border-green-400 hover:transition hover:ease-in-out hover:border-blue-500 duration-150 hover:bg-blue-500 rounded-full border'>
         <Link href="/">
         <FaLinkedin />
-        </Link></li>
+        </Link></div>
 
-        <li>
-          <Link href="/"><FaWhatsapp/>
-        </Link></li>
+        <div className='hover:text-white p-2 border-blue-700 hover:transition hover:border-green-600 duration-150 hover:bg-green-700 rounded-full border'>
+          <Link href="/" >
+            <FaWhatsapp/>
+        </Link></div>
 
     </ul>
         

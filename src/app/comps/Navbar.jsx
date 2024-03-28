@@ -1,29 +1,28 @@
 import Image from 'next/image'
+import Input from './Input'
 import Link from 'next/link'
-import {FaGithub, FaInstagram, FaLinkedin, FaWhatsapp, } from 'react-icons/fa'
-import { GiQueenCrown } from 'react-icons/gi'
-import SocialIcons from './SocialIcons'
+import Button from './Button'
 export default function Navbar() {
-  return (
-    <nav className='bg-slate-200 text-slate-900  h-[20vh] flex justify-between text-3xl capitalize'>
 
-    <div className='flex item-center gap-x-5'>
-      <Image src="/LOGO.png" alt="Gn" width="100" height="30" className='rounded-md shadow-2xl transform hover:scale-100 duration-300'/>
-      <p>GamingNow</p>
+  return (
+    <nav className='border-gray-950 border-y-2 flex justify-between items-center text-2xl capitalize font-bold mt-10'>
+
+    <div className='flex justify-between item-center gap-x-5'>
+      <Image src="/LOGO.png" alt="Gn" width="50" height="30" className='rounded-md shadow-lg ml-5'/>
+      <h1 className='m-2 text-4xl'>GamingNow</h1>
     </div>
 
-
-    <ul className='flex items-center gap-x-5'>
-        <li><Link href="/">Home</Link></li>
-        <li><Link href="/">Pages</Link></li>
-        <li><Link href="/about">About</Link></li>
-    </ul>
+    <div className='flex space-x-3  justify-center p-8 text-3xl border-r-2 border-black'>
+        <div className='hover:bg-fuchsia-300 hover:rounded-full hover:border-8'><Link href="/">Home</Link></div>
+        <div><Link href="/">Pages</Link></div>
+        <div><Link href="/about">About</Link></div>
+    </div>
     
-    <SocialIcons/>
-    <li><Link href="/">
-        <span>Subscribe</span>
-        <GiQueenCrown/>
-        </Link></li>
+    {/* <SocialIcons/> */}
+    <div className='border-l-3 space-x-2 border-black'>
+        <Input type="email" userid="email" place="Enter Email" />
+        <Button status="subscribe" />
+        </div>
     </nav>
   )
 }

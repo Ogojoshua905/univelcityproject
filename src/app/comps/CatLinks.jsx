@@ -1,7 +1,7 @@
 import React from "react"
 
-export default function Catlinks({title, bg}) {
+export default function Catlinks({props}) {
   return (
-    <span className={`inline-block hover:cursor-move py-4 px-6 m-3 uppercase gap-3 ${bg}`}>{title}</span>
+    <span className={`inline-block py-4 px-6 m-3 uppercase gap-3 ${props.bg}`}>{props.title}</span>
   )
 }

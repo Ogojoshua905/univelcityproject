@@ -1,9 +1,9 @@
-import { Vujahday_Script } from "next/font/google";
+import { Acme } from "next/font/google";
 import Navbar from "./comps/Navbar";
 import Footer from "./comps/Footer";
 import "./globals.css";
 
-const Viju = Vujahday_Script({ 
+const Viju = Acme({ 
   subsets: ["latin"], 
   weight:['400']});
 

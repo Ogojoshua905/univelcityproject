@@ -5,8 +5,8 @@ export default function layout({children}) {
     <div>
         <div>
             <BlogCat />
-      {children}
         </div>
+      {children}
     </div>
   )
 }

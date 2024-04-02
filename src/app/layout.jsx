@@ -2,6 +2,7 @@ import { Acme } from "next/font/google";
 import Navbar from "./comps/Navbar";
 import Footer from "./comps/Footer";
 import "./globals.css";
+import { motion } from "framer-motion";
 
 const Viju = Acme({ 
   subsets: ["latin"], 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
 
       <body className={Viju.className}>
       <Navbar />
+      
 
         <div className="min-h-[90vh]">
         {children}

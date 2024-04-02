@@ -125,10 +125,10 @@ console.log(articles);
 
 export default function Category() {
   return (
-    <div className="grid grid-cols-3">
-      {resources.map(resources=>(
-        <section key={resources.id }>
-            <h2>{resources.title}</h2>
+    <div className="grid grid-cols-3 gap-4">
+      {articles.map(articles=>(
+        <section key={articles.id } className={`bg-[url(/media/${articles.category}.jpg)]`}>
+            <h2>{articles.title}</h2>
         </section>
       ))}
     </div>

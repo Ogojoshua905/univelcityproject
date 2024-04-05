@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-   <footer className='h-[100vh] bg-slate-900 text-white flex gap-9'>
+   <footer className='h-[100vh] bg-[#111812] text-white flex gap-9'>
     <div className="flex flex-col gap-y-6">
 
     {/* <p className="animate-left">We are dedicated to providing the best gaming experience for our users.</p> */}

@@ -3,7 +3,7 @@ import React from "react"
 
 export default function PageLinks({title,link}) {
   return (
-    <li className="hover:text-red-600">
+    <li className=" hover:text-[#d45f5f]">
       <Link href={link}>
       {title}
       </Link>

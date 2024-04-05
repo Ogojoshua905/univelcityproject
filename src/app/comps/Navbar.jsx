@@ -1,17 +1,19 @@
 import Image from 'next/image'
 import Input from './Input'
 import Link from 'next/link'
+import { BiSolidJoystick } from "react-icons/bi"
 import { FaAngleDown } from 'react-icons/fa'
 import Button from './Button'
 
 export default function Navbar({children}) {
 
   return (
-    <nav className='border-gray-950 border-y-2 flex justify-between items-center text-2xl capitalize font-bold mt-14'>
+    <nav className='border-gray-950 border-y-2 flex justify-between items-center text-2xl capitalize font-bold mt-20'>
 
     {children}
-    <div className='flex justify-between item-center gap-x-5'>
-      <Image src="/LOGO.png" alt="Gn" width="50" height="30" className='rounded-md shadow-lg ml-5'/>
+    <div className='flex justify-between items-center gap-x-3'>
+    <BiSolidJoystick className=' justify-center items-center ml-2' />
+      {/* <Image src="/LOGO.png" alt="Gn" width="50" height="30" className='rounded-md shadow-lg ml-5'/> */}
       <h1 className='m-2 text-4xl'>GamingNow</h1>
     </div>
 

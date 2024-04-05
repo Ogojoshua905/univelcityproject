@@ -1,11 +1,13 @@
+import Link from "next/link";
+
 export const articles = [
   {
     id: 1,
     category: "Mobile Tech",
     author: "TechGuru123",
     description: [
-      "Exploring the latest advancements in mobile technology.",
-      "From foldable screens to 5G connectivity, the mobile tech landscape is constantly evolving.",
+      "Exploring the latest advancements in m obile technology.",
+      "From foldable screens to 5G connectivity, the mobile  tech landscape is constantly evolving.",
       "With each new release, smartphones become more powerful and versatile, reshaping how we communicate, work, and entertain ourselves.",
       "This article delves into the cutting-edge innovations driving the mobile industry forward, offering insights into what the future holds for mobile devices."
     ],
@@ -127,9 +129,9 @@ export default function Category() {
   return (
     <div className="grid grid-cols-3 gap-4">
       {articles.map(articles=>(
-        <section key={articles.id } className={`bg-[url(/media/${articles.category}.jpg)]`}>
+        <Link key={articles.id } className={`bg-[url(/media/${articles.category}.jpg)] bg-cover h-[300px]`}>
             <h2>{articles.title}</h2>
-        </section>
+        </Link>
       ))}
     </div>
   )

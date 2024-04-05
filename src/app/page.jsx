@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function Home() {
   return (
     <div>
-      <h1 className="text-[40px] justify-center text-center mt-8">Master Your Game: Level Up and Conquer!</h1>
+      <h1 className="text-6xl justify-center text-center mt-8">Master Your Game: Level Up and Conquer!</h1>
 
       <div className="grid lg:grid-cols-3 gap-5 mt-8 text-white rounded-2xl">
         <div className="border border-black bg-blue-950">

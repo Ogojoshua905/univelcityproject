@@ -3,19 +3,24 @@ import Link from "next/link";
 export const articles = [
   {
     id: 1,
-    category: "Mobile Tech",
+    category: "Mobile-Tech",
     author: "TechGuru123",
     description: [
       "Exploring the latest advancements in m obile technology.",
       "From foldable screens to 5G connectivity, the mobile  tech landscape is constantly evolving.",
       "With each new release, smartphones become more powerful and versatile, reshaping how we communicate, work, and entertain ourselves.",
-      "This article delves into the cutting-edge innovations driving the mobile industry forward, offering insights into what the future holds for mobile devices."
+      "This article delves into the cutting-edge innovations driving the mobile industry forward, offering insights into what the future holds for mobile devices.",
+      "Comparing the latest mobile devices in terms of performance camera quality and battery life.",
+
+      "With so many options on the market, choosing the right smartphone can be overwhelming.",
+      "This article provides side-by-side comparisons of popular devices, helping readers make informed purchasing decisions.",
+      "Whether you're interested in flagship models or budget-friendly options, you'll find valuable insights in this article."
     ],
     date: "2024-03-28"
   },
   {
     id: 2,
-    category: "Mobile Gaming",
+    category: "Mobile-Gaming",
     author: "GameMaster9000",
     description: [
       "Reviewing the hottest mobile games of the season.",
@@ -27,7 +32,7 @@ export const articles = [
   },
   {
     id: 3,
-    category: "Battle Royale Games",
+    category: "Battle-Royale-Games",
     author: "BattleRoyaleFanatic",
     description: [
       "Diving deep into the world of battle royale games.",
@@ -73,7 +78,7 @@ export const articles = [
     ],
     date: "2024-03-28"
   },
-  {
+  {  
     id: 7,
     category: "Sports",
     author: "SportsFanatic",
@@ -87,7 +92,7 @@ export const articles = [
   },
   {
     id: 8,
-    category: "Cyber Security",
+    category: "Cyber-Security",
     author: "CyberSecurityExpert",
     description: [
       "Informing readers about cyber threats and best practices for online safety.",
@@ -99,7 +104,7 @@ export const articles = [
   },
   {
     id: 9,
-    category: "Cyber Technology",
+    category: "Cyber-Technology",
     author: "TechWizard789",
     description: [
       "Exploring cutting-edge innovations in cyber technology.",
@@ -109,18 +114,6 @@ export const articles = [
     ],
     date: "2024-03-28"
   },
-  {
-    id: 10,
-    category: "Mobile Tech",
-    author: "PhoneTechie",
-    description: [
-      "Comparing the latest mobile devices in terms of performance, camera quality, and battery life.",
-      "With so many options on the market, choosing the right smartphone can be overwhelming.",
-      "This article provides side-by-side comparisons of popular devices, helping readers make informed purchasing decisions.",
-      "Whether you're interested in flagship models or budget-friendly options, you'll find valuable insights in this article."
-    ],
-    date: "2024-03-28"
-  }
 ];
 
 console.log(articles);
@@ -129,9 +122,11 @@ export default function Category() {
   return (
     <div className="grid grid-cols-3 gap-4">
       {articles.map(articles=>(
-        <Link key={articles.id } className={`bg-[url(/media/${articles.category}.jpg)] bg-cover h-[300px]`}>
+        <>
+        <section  className={`bg-cover h-[300px]`} style={{backgroundImage: `url(/media/${articles.category}.jpg)`}}>
             <h2>{articles.title}</h2>
-        </Link>
+        </section>
+        </>
       ))}
     </div>
   )

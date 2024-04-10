@@ -8,7 +8,7 @@ export default function page() {
       <h1 className=' justify-center text-center mt-7 text-7xl'>Focus on the Quest Objective!</h1>
 
       <div className=' justify-center object-center items-center mt-6'>
-        <Image className='w-[95%] h-[300px]' src="/media/BR.jpg" width="400" height="200"/>
+        <Image className='w-[95%] ml-9 h-[300px]' src="/media/BR.jpg" width="400" height="200"/>
       </div>
 
       <div className='grid grid-cols-3 grid-rows-1 ml-12 gap-5 mr-12 mt-6 border-t-2 border-b-2 border-black mb-14'>

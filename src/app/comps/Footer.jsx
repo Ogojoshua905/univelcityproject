@@ -1,4 +1,3 @@
-import CatLinks from './Catlinks'
 import Image from 'next/image'
 import SocialIcons  from './SocialIcons'
 import PageLinks from './PageLinks'

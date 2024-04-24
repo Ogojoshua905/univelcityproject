@@ -13,7 +13,7 @@ export default function Home() {
         </div>
 
         <div className=" border-black object-fill transform hover:scale-95 transition ease-in-out duration-500 relative">
-          <Image className="hover:scale-95" src='https://images.pexels.com/photos/9072385/pexels-photo-9072385.jpeg?auto=compress&cs=tinysrgb&w=400' width='500' height='100'/>
+          <Image className="hover:scale-95" src='https://images.pexels.com/photos/9072385/pexels-photo-9072385.jpeg?auto=compress&cs=tinysrgb&w=400' alt="don't care" width='500' height='100'/>
         </div>
 
         <div className="  border border-black bg-violet-700 text-white">

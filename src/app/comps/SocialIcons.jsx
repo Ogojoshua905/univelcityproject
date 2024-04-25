@@ -1,3 +1,4 @@
+
 import {FaGithub, FaInstagram, FaLinkedin, FaWhatsapp, } from 'react-icons/fa'
 import { GiQueenCrown } from 'react-icons/gi'
 import Link from 'next/link'

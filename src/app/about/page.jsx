@@ -1,9 +1,18 @@
+"use client"
+
 import React from 'react'
 import Image from 'next/image'
+import { motion, AnimatePresence } from "framer-motion"
 
 export default function page() {
   return (
-    <div>
+<AnimatePresence>
+
+    <motion.div
+      initial={{ opacity:0 }}
+      whileInView={{opacity: 1}}
+      transition={{duration: 0.8 }}
+    >
       
       <h1 className=' justify-center text-center mt-7 text-7xl'>Focus on the Quest Objective!</h1>
 
@@ -17,9 +26,11 @@ export default function page() {
         </div>
 
         <div className=' col-span-2 ml-12 border-l-2 border-black '>
-            <Image className=' ml-12 w-[85%] h-[300px] pb-4 mt-4' src="/media/E-sport.jpg"  alt='whatever' width="400" height="100" />
+            <Image className=' ml-12 w-[85%] h-[300px] pb-4 mt-4' src="/media/eSports.jpg"  alt='A Gaming Setup' width="400" height="100" />
             <p className=' ml-12 text-justify justify-between'>
-              "Guild—a collaboration of enthusiastic minds united by a mutual dedication to greatness. Every member possesses a distinct array of talents and backgrounds, enriching the diverse range of viewpoints that influence our endeavors in the realm of tech and mobile gaming."
+              <q>
+                Guild—a collaboration of enthusiastic minds united by a mutual dedication to greatness. Every member possesses a distinct array of talents and backgrounds, enriching the diverse range of viewpoints that influence our endeavors in the realm of tech and mobile gaming.
+                </q>
             </p>
         </div>
       </div>
@@ -59,6 +70,7 @@ export default function page() {
         <h2>Our Author</h2>
 
         </div>
-    </div>
+    </motion.div>
+</AnimatePresence>
   )
 }

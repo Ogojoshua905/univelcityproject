@@ -2,7 +2,6 @@ import { Acme } from "next/font/google";
 import Navbar from "./comps/Navbar";
 import Footer from "./comps/Footer";
 import "./globals.css";
-import { motion } from "framer-motion";
 
 const Viju = Acme({ 
   subsets: ["latin"], 

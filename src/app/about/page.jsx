@@ -3,6 +3,9 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from "framer-motion"
+import ProfIcons from '../comps/ProfIcons'
+import Button from '../comps/Button'
+
 
 export default function page() {
   return (
@@ -66,8 +69,56 @@ export default function page() {
         </div>
       </div>
 
-        <div>
-        <h2>Our Author</h2>
+        <div className=' grid grid-cols-3 grid-row-6 gap-10 p-10 ml-11'>
+          <div className='flex col-span-3 justify-between'>
+            <h2>Our Author</h2>  
+            <Button status="View Post" />
+          </div>
+
+          <div className='border border-black leading-relaxed'>
+              <Image className='pl-24 pt-4 h-[204px] w-[324px]' src="/media/Johnsmith.jpg" width="300" height="800" alt='John Smith'/>
+              <h2 className=' font-bold text-center text-2xl mt-4'>John Smith</h2>
+              <h2 className='text-center italic'>Technology Enthusiast</h2>
+              <p className=' ml-5 mr-5 mb-5 text-center'>"Embark on a journey through the ever-evolving world of technology with me, John Smith. As a tech enthusiast and avid explorer of innovation, I'm here to unravel the latest advancements in mobile technology and share insights that shape our digital landscape."</p>
+          </div>
+
+          <div className='border border-black leading-relaxed'>
+            <Image className=' pl-24 pt-4 h-[204px] w-[324px] items-center' src="/media/Emily.jpg" width="300" height="1000" alt='Emily Johnson' />
+            <h2 className=' font-bold text-center text-2xl mt-4'>Emily Johnson</h2>
+            <h2 className=' text-center italic'>Tech Writer</h2>
+            <p className=' ml-5 mr-5 mb-5 text-center'>"Join me, Emily Johnson, on an adventure into the vibrant realm of mobile gaming. With a passion for immersive experiences and a keen eye for standout titles, I'm here to guide you through the thrilling world of mobile games and uncover hidden gems that captivate gamers of all kinds."</p>
+
+          </div>
+
+          <div className=' border border-black leading-relaxed  '>
+          <Image className=' pl-24 pt-4 pr-9 h-[204px] w-[324px] items-center' src="/media/Michael.jpg" width="300" height="1000" alt='Emily Johnson' />
+            <h2 className=' font-bold text-center text-2xl mt-4'>Michael Brown</h2>
+            <h2 className=' text-center italic'>Gaming Expert</h2>
+            <p className=' ml-5 mr-5 mb-5 text-center'>"Welcome, fellow gamers, to the battlegrounds of the digital arena! I'm Michael Brown, your guide to the heart-pounding world of battle royale games. Join me as we dive deep into strategies, analyze updates, and dominate the battlefield in games like Fortnite and PUBG."</p>
+            <ProfIcons />
+          </div>
+
+          <div className=' border border-black leading-relaxed  '>
+          <Image className=' pl-24 pt-4 h-[204px] w-[324px]' src="/media/Jessica.jpg" width="300" height="1000" alt='Jessica Martinez' />
+            <h2 className=' font-bold text-center text-2xl mt-4'>Jessica Martinez</h2>
+            <h2 className=' text-center italic'>Tech Journalist</h2>
+            <p className=' ml-5 mr-5 mb-5 text-center'>"Hola! I'm Jessica Martinez, your tech companion on a journey through the innovative universe of Samsung devices. From smartphones to smartwatches, join me as we explore the latest features, delve into in-depth reviews, and navigate the exciting world of Samsung technology."</p>
+          </div>
+
+          <div className=' border border-black leading-relaxed'>
+          <Image className=' pl-24 pt-4 h-[204px] w-[324px]' src="/media/David.jpg" width="300" height="1000" alt='Sophia Clark' />
+            <h2 className=' font-bold text-center text-2xl mt-4'>David Anderson</h2>
+            <h2 className=' text-center italic'>Apple Afficionado</h2>
+            <p className=' ml-5 mr-5 text-center'>"Greetings, Apple aficionados! I'm David Anderson, your go-to guide for all things iPhone. Join me as we uncover the newest features, unravel software updates, and delve into the unparalleled world of Apple innovation, one iPhone at a time."</p>
+          </div>
+
+          <div className=' border border-black leading-relaxed'>
+          <Image className=' pl-24 pt-4 h-[204px] w-[324px]' src="/media/Sophia.jpg" width="300" height="1000" alt='Sophia Clark' />
+            <h2 className=' font-bold text-center text-2xl mt-4'>Sophia Clark</h2>
+            <h2 className=' text-center italic'>e-Sports Journalist</h2>
+            <p className=' ml-5 mr-5 text-center'>"Greetings, esports enthusiasts! I'm Sophia Clark, your trusted source for all things competitive gaming. Join me as we journey through the electrifying world of esports, covering major tournaments, emerging stars, and the pulse-pounding excitement of competitive gaming."</p>
+
+          </div>
 
         </div>
     </motion.div>

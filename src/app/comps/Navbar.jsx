@@ -5,12 +5,12 @@ import { BiSolidJoystick } from "react-icons/bi"
 import { FaAngleDown } from 'react-icons/fa'
 import Button from './Button'
 
-export default function Navbar({children}) {
+export default function Navbar( ) {
 
   return (
     <nav className='border-gray-950 border-y-2 flex justify-between items-center text-2xl capitalize font-bold mt-20'>
 
-    {children}
+    
     <div className='flex justify-between items-center gap-x-3'>
     <BiSolidJoystick className=' justify-center items-center ml-2' />
       {/* <Image src="/LOGO.png" alt="Gn" width="50" height="30" className='rounded-md shadow-lg ml-5'/> */}

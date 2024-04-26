@@ -2,13 +2,14 @@ import Image from 'next/image'
 import SocialIcons  from './SocialIcons'
 import PageLinks from './PageLinks'
 import Link from 'next/link'
+import { BiSolidJoystick } from 'react-icons/bi'
 
 export default function Footer() {
   return (
    <footer className='h-[100vh] bg-[#111812] text-white flex gap-9'>
     <div className="flex flex-col gap-y-6">
-
-    <p className='text-3xl'>GamingNow</p>
+    
+    <p className='text-3xl flex gap-x-3'><BiSolidJoystick className=' justify-center items-center ml-2' />GamingNow</p>
         <p>Thank you for choosing GamingNow as your go-to <br /> platform for all things gaming</p>
         <SocialIcons />
     </div>

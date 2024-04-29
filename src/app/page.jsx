@@ -17,7 +17,23 @@ const gridContainerVariants = {
 export default function Home() {
   return (
     <AnimatePresence>
-    <div>
+    <motion.div
+      initial={{ opacity:1,
+
+        show:{opacity:0,
+          transition:{
+            staggerChildren: 0.25,
+            duration: 0.75,
+            
+          }
+        }
+      }}
+      whileInView={{
+        opacity:1
+      }}
+      viewport={{
+        amount:"all"
+      }}>
       <h1 className="text-6xl justify-center text-center mt-8">Master Your Game: Level Up and Conquer!</h1>
 
       <motion.div
@@ -35,7 +51,8 @@ export default function Home() {
             opacity: 0, y:-100}} animate={{ opacity:1, y:0}} transition={{duration: 0.4, ease: "easeOut"}}><q>Embark on thrilling adventures, compete in epic battles, and forge unforgettable memories as you navigate through a myriad of gaming landscapes</q></motion.p>
         </motion.div>
 
-        <motion.div variants={gridSquareVariants} className=" border-black object-fill transform hover:scale-95 transition ease-in-out duration-500 relative">
+        <motion.div variants={gridSquareVariants}
+         className=" border-black object-fill transform hover:scale-95 transition ease-in-out duration-500 relative">
           <Image className="hover:scale-95 bg-cover" src='https://images.pexels.com/photos/9072385/pexels-photo-9072385.jpeg?auto=compress&cs=tinysrgb&w=400' alt="don't care" width='500' height='100'/>
         </motion.div>
 
@@ -48,7 +65,7 @@ export default function Home() {
 </p>
         </motion.div>
       </motion.div>
-    </div>
+    </motion.div>
     </AnimatePresence>
   )
 }

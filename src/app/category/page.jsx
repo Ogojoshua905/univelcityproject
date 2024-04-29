@@ -82,54 +82,54 @@ export const articles = [
       ],
       date: "2024-03-28"
     },
-    {
-      id: 7,
-      title: "Bringing You the Latest News, Analysis, and Highlights from the World of Sports",
-      category: "Sports",
-      author: "Andrew Wilson",
-      description: [
-        "Bringing you the latest news, analysis, and highlights from the world of sports.",
-        "From football to basketball to soccer, sports fans have plenty to cheer about.",
-        "This article covers the biggest stories and matchups in the sports world, offering expert analysis and commentary.",
-        "Whether you're a die-hard fan or a casual observer, you'll find something to enjoy in this article."
-      ],
-      date: "2024-03-28"
-    },
-    {
-      id: 8,
-      title: "Informing Readers about Cyber Threats and Best Practices for Online Safety",
-      category: "Cyber-Security",
-      author: "Rachel Turner",
-      description: [
-        "Informing readers about cyber threats and best practices for online safety.",
-        "With cyber attacks on the rise, it's more important than ever to protect yourself online.",
-        "This article highlights common security threats, such as phishing scams and malware, and offers practical tips for safeguarding your personal information.",
-        "Whether you're a novice or an expert, you'll find valuable advice in this article."
-      ],
-      date: "2024-03-28"
-    },
-    {
-      id: 9,
-      title: "Exploring Cutting-Edge Innovations in Cyber Technology",
-      category: "Cyber-Technology",
-      author: "Kevin Harris",
-      description: [
-        "Exploring cutting-edge innovations in cyber technology.",
-        "From AI-driven cybersecurity solutions to blockchain developments, the tech landscape is constantly evolving.",
-        "This article delves into the latest advancements in cyber technology, discussing their potential impact on industries such as finance, healthcare, and transportation.",
-        "Whether you're a tech enthusiast or a curious observer, you'll find this article both informative and engaging."
-      ],
-      date: "2024-03-28"
-    },
+    // {
+    //   id: 7,
+    //   title: "Bringing You the Latest News, Analysis, and Highlights from the World of Sports",
+    //   category: "Sports",
+    //   author: "Andrew Wilson",
+    //   description: [
+    //     "Bringing you the latest news, analysis, and highlights from the world of sports.",
+    //     "From football to basketball to soccer, sports fans have plenty to cheer about.",
+    //     "This article covers the biggest stories and matchups in the sports world, offering expert analysis and commentary.",
+    //     "Whether you're a die-hard fan or a casual observer, you'll find something to enjoy in this article."
+    //   ],
+    //   date: "2024-03-28"
+    // },
+    // {
+    //   id: 8,
+    //   title: "Informing Readers about Cyber Threats and Best Practices for Online Safety",
+    //   category: "Cyber-Technology",
+    //   author: "Rachel Turner",
+    //   description: [
+    //     "Informing readers about cyber threats and best practices for online safety.",
+    //     "With cyber attacks on the rise, it's more important than ever to protect yourself online.",
+    //     "This article highlights common security threats, such as phishing scams and malware, and offers practical tips for safeguarding your personal information.",
+    //     "Whether you're a novice or an expert, you'll find valuable advice in this article."
+    //   ],
+    //   date: "2024-03-28"
+    // },
+    // {
+    //   id: 9,
+    //   title: "Exploring Cutting-Edge Innovations in Cyber Technology",
+    //   category: "Cyber-Technology",
+    //   author: "Kevin Harris",
+    //   description: [
+    //     "Exploring cutting-edge innovations in cyber technology.",
+    //     "From AI-driven cybersecurity solutions to blockchain developments, the tech landscape is constantly evolving.",
+    //     "This article delves into the latest advancements in cyber technology, discussing their potential impact on industries such as finance, healthcare, and transportation.",
+    //     "Whether you're a tech enthusiast or a curious observer, you'll find this article both informative and engaging."
+    //   ],
+    //   date: "2024-03-28"
+    // },
   ];
   
   console.log(articles);
   
 export default function Category() {
   return (
-    <div className="grid grid-cols-3 gap-4">
-      {articles.map(articles=>(
-        <Link key={articles.id} href={``} title={articles.title}>
+    <div className="grid grid-cols-3 gap-4 mb-7 object-cover pl-4 pr-4">
+      {articles.map(articles => (
+        <Link key={articles.id} href={`/blog/${articles.title.split(' ').join('-')}`} title={articles.title}>
         <section  className={`bg-cover h-[300px]`} style={{backgroundImage: `url(/media/${articles.category}.jpg)`}}>
             <h2>{articles.title}</h2>
         </section>

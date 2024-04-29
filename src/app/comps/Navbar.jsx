@@ -4,6 +4,14 @@ import Link from 'next/link'
 import { BiSolidJoystick } from "react-icons/bi"
 import { FaAngleDown } from 'react-icons/fa'
 import Button from './Button'
+import { RxHamburgerMenu } from "react-icons/rx";
+
+// const burger = document.querySelector("#burger")
+// const menu = document.querySelector("#menu")
+
+// burger.addEventListener("click", () => {
+
+// })
 
 export default function Navbar( ) {
 
@@ -17,18 +25,22 @@ export default function Navbar( ) {
       <h1 className='m-2 text-4xl'>GamingNow</h1>
     </div>
 
-    <div className='flex space-x-3  justify-center p-1 text-2xl border-r-2 border-black'>
+    <div className='md:flex hidden space-x-3  justify-center p-1 text-2xl border-r-2 border-black' id='menu'>
         <div className='rounded-full py-2 px-3 cursor-pointer transform hover:scale-90 transition ease-in-out duration-300 border-b-2 hover:border-red-300'><Link href="/">Home</Link></div>
         <div className='py-2 px-3 rounded-full'><Link href="/about">About</Link></div>
-        <div className='py-2 px-3'><Link href="/blog">Blog</Link></div>
-        <div className='py-2 px-3'><Link href="/category">Category</Link></div>
+        <div className='py-2 px-3'><Link href="/category">Blog</Link></div>
+        <div className='py-2 px-3'><Link href="/blog">Category</Link></div>
         <div className='py-2 px-3'><Link href="/contact">Contact</Link></div>
     </div>
     
     {/* <SocialIcons/> */}
-    <div className=' border-none '>
+    <div className=' border-none md:flex hidden ' id='menu'>
         <Input type="email" userid="email" place="Enter Email" />
         <Button status="subscribe" />
+        </div>
+
+        <div className='px-4 md:hidden text-white bg-black cursor-pointer' id='burger'>
+        <RxHamburgerMenu className='w-6' />
         </div>
     </nav>
   )

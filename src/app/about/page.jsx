@@ -12,12 +12,33 @@ export default function page() {
 <AnimatePresence>
 
     <motion.div
-      initial={{ opacity:0 }}
-      whileInView={{opacity: 1}}
-      transition={{duration: 0.8 }}
+      // initial={{ opacity:0 }}
+      // whileInView={{opacity: 1}}
+      // transition={{duration: 0.8 }}
+  
+      // initial={{ opacity: 0, y: -50 }} // Initial animation state
+      // animate={{ opacity: 1, y: 0 }} // Animation on load
+      // transition={{ duration: 0.5, ease: "easeInOut" }} // Animation duration and easing
+      initial={{ opacity:0,
+
+        show:{opacity:1,
+          transition:{
+            duration: 0.75,
+            
+          }
+        }
+      }}
+      whileInView={{
+        opacity:1
+      }}
+      viewport={{
+        amount:"all"
+      }}
     >
-      
-      <h1 className=' justify-center text-center mt-7 text-7xl'>Focus on the Quest Objective!</h1>
+      <motion.h1
+        
+        
+       className='justify-center text-center mt-7 text-7xl'>Focus on the Quest Objective!</motion.h1>
 
       <div className=' justify-center object-center items-center mt-6'>
         <Image className='w-[95%] ml-9 h-[300px]' src="/media/BR.jpg" alt='dont know' width="400" height="200"/>
@@ -75,14 +96,14 @@ export default function page() {
             <Button status="View Post" />
           </div>
 
-          <div className='border border-black leading-relaxed'>
+          <div className=' border-black border-4 leading-relaxed hover:duration-700 hover:ease-out hover:bg-pink-400 border-opacity-95 rounded-lg aspect-auto'>
               <Image className='pl-24 pt-4 h-[204px] w-[324px]' src="/media/Johnsmith.jpg" width="300" height="800" alt='John Smith'/>
               <h2 className=' font-bold text-center text-2xl mt-4'>John Smith</h2>
               <h2 className='text-center italic'>Technology Enthusiast</h2>
               <p className=' ml-5 mr-5 mb-5 text-center'>"Embark on a journey through the ever-evolving world of technology with me, John Smith. As a tech enthusiast and avid explorer of innovation, I'm here to unravel the latest advancements in mobile technology and share insights that shape our digital landscape."</p>
           </div>
 
-          <div className='border border-black leading-relaxed'>
+          <div className='border-4 border-black leading-relaxed'>
             <Image className=' pl-24 pt-4 h-[204px] w-[324px] items-center' src="/media/Emily.jpg" width="300" height="1000" alt='Emily Johnson' />
             <h2 className=' font-bold text-center text-2xl mt-4'>Emily Johnson</h2>
             <h2 className=' text-center italic'>Tech Writer</h2>
@@ -90,7 +111,7 @@ export default function page() {
 
           </div>
 
-          <div className=' border border-black leading-relaxed  '>
+          <div className=' border-4 border-black leading-relaxed  '>
           <Image className=' pl-24 pt-4 pr-9 h-[204px] w-[324px] items-center' src="/media/Michael.jpg" width="300" height="1000" alt='Emily Johnson' />
             <h2 className=' font-bold text-center text-2xl mt-4'>Michael Brown</h2>
             <h2 className=' text-center italic'>Gaming Expert</h2>
@@ -98,29 +119,38 @@ export default function page() {
             <ProfIcons />
           </div>
 
-          <div className=' border border-black leading-relaxed  '>
+          <div className=' border-4 border-black leading-relaxed  '>
           <Image className=' pl-24 pt-4 h-[204px] w-[324px]' src="/media/Jessica.jpg" width="300" height="1000" alt='Jessica Martinez' />
             <h2 className=' font-bold text-center text-2xl mt-4'>Jessica Martinez</h2>
             <h2 className=' text-center italic'>Tech Journalist</h2>
             <p className=' ml-5 mr-5 mb-5 text-center'>"Hola! I'm Jessica Martinez, your tech companion on a journey through the innovative universe of Samsung devices. From smartphones to smartwatches, join me as we explore the latest features, delve into in-depth reviews, and navigate the exciting world of Samsung technology."</p>
           </div>
 
-          <div className=' border border-black leading-relaxed'>
+          <div className=' border-4 border-black leading-relaxed'>
           <Image className=' pl-24 pt-4 h-[204px] w-[324px]' src="/media/David.jpg" width="300" height="1000" alt='Sophia Clark' />
             <h2 className=' font-bold text-center text-2xl mt-4'>David Anderson</h2>
             <h2 className=' text-center italic'>Apple Afficionado</h2>
             <p className=' ml-5 mr-5 text-center'>"Greetings, Apple aficionados! I'm David Anderson, your go-to guide for all things iPhone. Join me as we uncover the newest features, unravel software updates, and delve into the unparalleled world of Apple innovation, one iPhone at a time."</p>
           </div>
 
-          <div className=' border border-black leading-relaxed'>
+          <div className=' border-4 border-black leading-relaxed'>
           <Image className=' pl-24 pt-4 h-[204px] w-[324px]' src="/media/Sophia.jpg" width="300" height="1000" alt='Sophia Clark' />
             <h2 className=' font-bold text-center text-2xl mt-4'>Sophia Clark</h2>
             <h2 className=' text-center italic'>e-Sports Journalist</h2>
             <p className=' ml-5 mr-5 text-center'>"Greetings, esports enthusiasts! I'm Sophia Clark, your trusted source for all things competitive gaming. Join me as we journey through the electrifying world of esports, covering major tournaments, emerging stars, and the pulse-pounding excitement of competitive gaming."</p>
 
           </div>
-
         </div>
+        <motion.div
+          className='w-1/3 h-1/3 bg-rose-400'
+          animate={{
+            scale: [1, 2, 2, 1],
+            rotate: [0, 90, 90, 0],
+            borderRadius: ["10%", "10", "50%", "10%"]
+          }}
+          transition={{ duration: 5, ease: "easeInOut", repeat: Infinity, repeatDelay: 1, }} />
+        
+       
     </motion.div>
 </AnimatePresence>
   )

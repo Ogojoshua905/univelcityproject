@@ -2,6 +2,7 @@ import { Acme } from "next/font/google";
 import Navbar from "./comps/Navbar";
 import Footer from "./comps/Footer";
 import "./globals.css";
+import Provider from "./comps/Provider";
 
 const Viju = Acme({ 
   subsets: ["latin"], 
@@ -18,6 +19,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body className={Viju.className}>
+        <Provider>
+
       <Navbar />
       
 
@@ -26,6 +29,8 @@ export default function RootLayout({ children }) {
         </div>
       
       <Footer />
+      
+        </Provider>
         </body>
     </html>
   );

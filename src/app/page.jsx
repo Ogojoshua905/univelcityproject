@@ -2,6 +2,8 @@
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
+import { articles } from "./category/page"
+
 
 const gridContainerVariants = {
     hidden:{opacity:0},
@@ -53,7 +55,7 @@ export default function Home() {
 
         <motion.div variants={gridSquareVariants}
          className=" border-black object-fill transform hover:scale-95 transition ease-in-out duration-500 relative">
-          <Image className="hover:scale-95 bg-cover" src='https://images.pexels.com/photos/9072385/pexels-photo-9072385.jpeg?auto=compress&cs=tinysrgb&w=400' alt="don't care" width='500' height='100'/>
+          <Image className="hover: bg-cover" src='https://images.pexels.com/photos/9072385/pexels-photo-9072385.jpeg?auto=compress&cs=tinysrgb&w=400' alt="don't care" width='500' height='100'/>
         </motion.div>
 
         <motion.div
@@ -65,6 +67,28 @@ export default function Home() {
 </p>
         </motion.div>
       </motion.div>
+
+      <div className="grid grid-col-3 grid-rows-[5]">
+            <div className=" col-span-1">
+
+            </div>
+
+            <div className="">
+
+            </div>
+
+            <div className=" row-span-2">
+
+            </div>
+
+            <div>
+
+            </div>
+
+            <div>
+
+            </div>
+      </div>
     </motion.div>
     </AnimatePresence>
   )

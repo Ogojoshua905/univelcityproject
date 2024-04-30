@@ -5,6 +5,7 @@ import { BiSolidJoystick } from "react-icons/bi"
 import { FaAngleDown } from 'react-icons/fa'
 import Button from './Button'
 import { RxHamburgerMenu } from "react-icons/rx";
+import ThemeSwitch from './ThemeSwitch'
 
 // const burger = document.querySelector("#burger")
 // const menu = document.querySelector("#menu")
@@ -16,7 +17,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 export default function Navbar( ) {
 
   return (
-    <nav className='border-gray-950 border-y-2 flex justify-between items-center text-2xl capitalize font-bold mt-20'>
+    <nav className='border-gray-950 dark:border-white border-y-2 flex justify-between items-center text-2xl capitalize font-bold mt-20'>
 
     
     <div className='flex justify-between items-center gap-x-3'>
@@ -25,18 +26,22 @@ export default function Navbar( ) {
       <h1 className='m-2 text-4xl'>GamingNow</h1>
     </div>
 
-    <div className='md:flex hidden space-x-3  justify-center p-1 text-2xl border-r-2 border-black' id='menu'>
+    <div className='md:flex hidden dark:border-white space-x-3  justify-between p-1 text-2xl border-r-2 border-black' id='menu'>
         <div className='rounded-full py-2 px-3 cursor-pointer transform hover:scale-90 transition ease-in-out duration-300 border-b-2 hover:border-red-300'><Link href="/">Home</Link></div>
         <div className='py-2 px-3 rounded-full'><Link href="/about">About</Link></div>
         <div className='py-2 px-3'><Link href="/category">Blog</Link></div>
         <div className='py-2 px-3'><Link href="/blog">Category</Link></div>
         <div className='py-2 px-3'><Link href="/contact">Contact</Link></div>
+
+        <div className=' align-middle items-center'>
+        <ThemeSwitch />
+        </div>
     </div>
     
     {/* <SocialIcons/> */}
-    <div className=' border-none md:flex hidden ' id='menu'>
+    <div className=' border-none md:flex hidden'>
         <Input type="email" userid="email" place="Enter Email" />
-        <Button status="subscribe" />
+        <Button className="p-3" status="subscribe" />
         </div>
 
         <div className='px-4 md:hidden text-white bg-black cursor-pointer' id='burger'>

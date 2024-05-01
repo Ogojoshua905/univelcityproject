@@ -127,14 +127,18 @@ export const articles = [
   
 export default function Category() {
   return (
-    <div className="grid grid-cols-3 gap-4 mb-7 object-cover pl-4 pr-4">
-      {articles.map(articles => (
-        <Link key={articles.id} href={`/blog/${articles.title.split(' ').join('-')}`} title={articles.title}>
-        <section  className={`bg-cover h-[300px]`} style={{backgroundImage: `url(/media/${articles.category}.jpg)`}}>
-            <h2>{articles.title}</h2>
-        </section>
+    <div className="grid md:grid-cols-3 gap-4">
+    {articles.map(article => (
+      <div key={article.id} className="border border-black dark:border-white rounded-md">
+        <Link href={`/blog/${article.title.split(' ').join('-')}`} title={article.title}>
+          <section className={`bg-cover h-40`} style={{backgroundImage: `url(/media/${article.category}.jpg)`}}>
+            
+          </section>
+          <h2 className="text-2xl">{article.title}</h2>
+          <p>{article.description}</p>
         </Link>
-      ))}
-    </div>
+      </div>
+    ))}
+  </div>
   )
 }

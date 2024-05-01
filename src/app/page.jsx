@@ -68,9 +68,9 @@ export default function Home() {
         </motion.div>
       </motion.div>
 
-      <div className="grid grid-col-3 grid-rows-[5]">
+      <div className="md:grid md:grid-col-3 grid-rows-[5]">
             <div className=" col-span-1">
-
+              
             </div>
 
             <div className="">

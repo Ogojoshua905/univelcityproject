@@ -10,7 +10,7 @@ export default function SocialIcons() {
     <ul className='flex items-center gap-x-5'>
         <motion.div whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }} className='hover:text-white p-2 rounded-full border'>
-            <Link href="/">
+            <Link href="https://github.com/Ogojoshua905">
             <FaGithub/>
             </Link>
         </motion.div>
@@ -23,13 +23,13 @@ export default function SocialIcons() {
 
         <motion.div whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }} className='hover:text-white p-2 border-green-400 hover:transition hover:ease-in-out hover:border-blue-500 duration-150 hover:bg-blue-500 rounded-full border'>
-        <Link href="/">
+        <Link href="https://www.linkedin.com/in/ogo-joshua-9572832a4/">
         <FaLinkedin />
         </Link></motion.div>
 
         <motion.div whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }} className='hover:text-white p-2 border-blue-700 hover:transition hover:border-green-600 duration-150 hover:bg-green-700 rounded-full border'>
-          <Link href="/" >
+          <Link href="https://wa.me/(+234)9160310791" >
             <FaWhatsapp/>
         </Link></motion.div>
 

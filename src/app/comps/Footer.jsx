@@ -8,30 +8,30 @@ export default function Footer() {
   return (
    <footer className='h-[100vh] bg-[#111812] text-white flex gap-9'>
     
-    <div className="flex flex-col gap-y-6">
+    <div className=" flex-col md:gap-y-6">
     
-    <p className='text-3xl flex gap-x-3'><BiSolidJoystick className=' justify-center items-center ml-2' />GamingNow</p>
+    <p className='text-3xl md:block gap-x-3'><BiSolidJoystick className=' justify-center items-center ml-2' />GamingNow</p>
         <p>Thank you for choosing GamingNow as your go-to <br /> platform for all things gaming</p>
         <SocialIcons />
     </div>
     
     
 
-    <div className='flex justify-start items-start gap-5 text-2xl'>
-  <div className='capitalize'>
+    <div className='md:flex  justify-start items-start gap-5 text-2xl'>
+  <div className='capitalize block'>
     <h2>Pages</h2>
     
       <ol>
         <PageLinks href="" title="Home" link='/'/>
         <PageLinks title="Author" link='/author'/>
-        <PageLinks title="Blog" link='/'/>
-        <PageLinks title="About Us" link='/'/>
-        <PageLinks title="Subscribe" link='/'/>
-        <PageLinks title="Privacy Policy" link='/'/>
+        <PageLinks title="Blog" link='/category'/>
+        <PageLinks title="About Us" link='/about'/>
+        {/* <PageLinks title="Subscribe" link='/contact'/>
+        <PageLinks title="Privacy Policy" link='/'/> */}
       </ol>
     </div>
 
-<div className='capitalize'>
+{/* <div className='capitalize block'>
   <h2>Trending</h2>
       <ol>
         <PageLinks title="Esport" link='/'/>
@@ -42,25 +42,21 @@ export default function Footer() {
         <PageLinks link='/'/>
       </ol>
     
-  </div> 
+  </div>  */}
 
-<div className='capitalize'>
+<div className='capitalize block pb-2'>
   <h2>Follow</h2>
       <ol>
-        <PageLinks title="Twitter" link='/'/>
-        <PageLinks title="GitHub" link='/'/>
-        <PageLinks title="LinkedIn" link='/'/>
-        <PageLinks title="Instagram" link='/'/>
-        <PageLinks title="Facebook" link='/'/>
-        <PageLinks link='/'/>
+        <PageLinks title="Twitter" link='https://twitter.com/Algebra905'/>
+        <PageLinks title="GitHub" link='https://github.com/Ogojoshua905'/>
+        <PageLinks title="LinkedIn" link='https://www.linkedin.com/in/ogo-joshua-9572832a4/'/>
+        <PageLinks title="Instagram" link='https://www.instagram.com/officialalgebra905/'/>
+        {/* <PageLinks title="Facebook" link='/'/>
+        <PageLinks link='/'/> */}
       </ol>
     
   </div>      
 
-    </div>
-    <div className='inline-block'>
-      <p>{`We're On Instagram`}</p>
-      
     </div>
 
    </footer>

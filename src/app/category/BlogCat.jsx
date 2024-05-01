@@ -2,7 +2,7 @@ import { articles } from "./page"
 import Link from "next/link"
 
 const articlesCat = articles.map(cat => (
-    <h2 key={cat.id} className="hover:bg-black hover:text-white border-2 border-black p-4"><Link href={`/category/${cat.category}`} title={cat.category}>{cat.category}</Link>
+    <h2 key={cat.id} className="hover:bg-black dark:hover:bg-white dark:hover:text-black dark:border-white hover:text-white border-2 border-black p-4"><Link href={`/category/${cat.category}`} title={cat.category}>{cat.category}</Link>
     </h2>
 ))
 

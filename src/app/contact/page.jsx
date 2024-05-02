@@ -1,5 +1,6 @@
 "use client"
 
+import { MdAddLocationAlt } from "react-icons/md";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
@@ -38,25 +39,27 @@ export default function page() {
             <Image className="w-[1500px]  h-[500px]" src="/media/chatting.jpg" height="300" width="1000" alt="People Discussing"/>
         </section>
 
-        <section className=" grid grid-cols-2 mt-5 pl-28 pr-28">
+        <section className=" grid md:grid-cols-2 mt-28 pl-28 pr-28 mb-32">
             <div>
-                <h2 className=" text-8xl">Let's Get Connected!</h2>
-                <p className=" text-[20px] mb-14">Whether you have questions about our blog, categories, or authors,<br /> feel free to reach out using the form and other contact information <br /> provided on this page.</p>
+                <h2 className=" text-8xl pb-12">Let's Get Connected!</h2>
+                <p className=" text-[20px] mb-14 leading-loose">Whether you have questions about our blog, categories, or authors,<br /> feel free to reach out using the form and other contact information <br /> provided on this page.</p>
 
-                <div className="mb-4">
-                  <div className=" inline-flex">
-                  <Link href="mailto:joshuaexcellency@gmail.com.com">
-                    <FaEnvelope className="hover:text-white p-2 border-red-500 hover:border-red-400 hover:bg-red-400 rounded-full border"/>Mail@GamingNow
+                <div className="mb-4 ">
+
+                  <Link className="flex mb-10" href="mailto:joshuaexcellency@gmail.com.com">
+                    <FaEnvelope className="hover:text-white p-2 rounded-full border"/><span className=" font-medium hover:text-pink-500">Email</span>
                     </Link>
-                  </div>
-
-                <div className=" flex">
-                <Link href="tel:(+234) 9160310791"><FaPhoneAlt /></Link>
-                </div>
-
-                <div>
                   
-                </div>
+
+                
+                <Link className="flex mb-10" href="tel:(+234) 9160310791"><FaPhoneAlt className="hover:text-white p-2 rounded-full border" />Phone</Link>
+                
+
+                
+                 <Link className="flex" href="https://maps.app.goo.gl/eEt7CQvc5nUmHULo7">
+                  <MdAddLocationAlt />Map
+                 </Link>
+                
 
               </div>
                 </div>

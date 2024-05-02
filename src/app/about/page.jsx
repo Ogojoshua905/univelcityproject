@@ -2,9 +2,13 @@
 
 import React from 'react'
 import Image from 'next/image'
+import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa'
+import { MdAddLocationAlt } from "react-icons/md";
+import ContactForm from '../comps/ContactForm';
 import { motion, AnimatePresence } from "framer-motion"
 import ProfIcons from '../comps/ProfIcons'
 import Button from '../comps/Button'
+import Link from 'next/link'
 
 
 export default function page() {
@@ -141,14 +145,36 @@ export default function page() {
 
           </div>
         </div>
-        <motion.div
-          className='w-1/3 h-1/3 bg-rose-400'
-          animate={{
-            scale: [1, 2, 2, 1],
-            rotate: [0, 90, 90, 0],
-            borderRadius: ["10%", "10", "50%", "10%"]
-          }}
-          transition={{ duration: 5, ease: "easeInOut", repeat: Infinity, repeatDelay: 1, }} />
+      
+        <section className=" md:grid md:grid-cols-2 mt-28 pl-28 pr-28 mb-32">
+            <div>
+                <h2 className=" text-8xl pb-12">Feel Free to Reach Out!</h2>
+                <p className=" text-[20px] mb-14 leading-loose">Don't hesitate to get in touch with us. We're here to help and eager to hear from you</p>
+
+                <div className="mb-4 ">
+
+                  <Link className="flex mb-10 text-xl" href="mailto:joshuaexcellency@gmail.com.com">
+                    <FaEnvelope className="hover:text-white p-2 rounded-full border"/><span className="hover:text-pink-500">Email</span>
+                    </Link>
+                  
+
+                
+                <Link className="flex mb-10 text-xl" href="tel:(+234) 9160310791"><FaPhoneAlt className="hover:text-white p-2 rounded-full border" /><span className="hover:text-pink-500">Phone</span></Link>
+                
+
+                
+                 <Link className="flex text-xl" href="https://maps.app.goo.gl/eEt7CQvc5nUmHULo7">
+                  <MdAddLocationAlt /><span className="hover:text-pink-500">Map</span>
+                 </Link>
+                
+
+              </div>
+                </div>
+
+            <div className=" border-4 pl-12 border-black dark:border-white leading-[100px]">
+               <ContactForm />
+            </div>
+        </section>
         
        
     </motion.div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export const articles = [
@@ -127,6 +128,12 @@ export const articles = [
   
 export default function Category() {
   return (
+    <div>
+      <div>
+          <h2></h2>
+          <Image src="" />
+      </div>
+
     <div className="grid md:grid-cols-3 gap-4">
     {articles.map(article => (
       <div key={article.id} className="border border-black dark:border-white rounded-md">
@@ -140,5 +147,6 @@ export default function Category() {
       </div>
     ))}
   </div>
+    </div>
   )
 }

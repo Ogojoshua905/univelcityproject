@@ -12,7 +12,7 @@ export default function BlogCat() {
 
         <section className="flex items-center justify-center">
             {articlesCat}
-          <h2 className=" focus:bg-black hover:bg-black hover:text-white border-4 border-black p-4"><Link href={`/category/`} title={`All Categories`}>
+          <h2 className=" focus:bg-black hover:bg-black dark:border-white hover:text-white border-4 border-black p-4"><Link href={`/category/`} title={`All Categories`}>
               All
             </Link>
             </h2>

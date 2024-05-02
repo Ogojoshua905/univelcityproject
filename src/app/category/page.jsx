@@ -129,10 +129,10 @@ export const articles = [
 export default function Category() {
   return (
     <div>
-      <div>
+      {/* <div>
           <h2></h2>
-          <Image src="" />
-      </div>
+          <Image className=" object-contain" src="/media/Abstract.jpg" width="100" height="300" />
+      </div> */}
 
     <div className="grid md:grid-cols-3 gap-4">
     {articles.map(article => (

@@ -6,7 +6,9 @@ import { BiSolidJoystick } from 'react-icons/bi'
 
 export default function Footer() {
   return (
-   <footer className='h-[100vh] bg-[#111812] text-white leading-6 md:flex gap-8 ml-14'>
+   <footer className='h-[100vh] bg-[#111812] text-white leading-6 md:flex gap-8'>
+    <div className=' ml-12'>
+
     
     <div className=" flex-col md:gap-y-6">
     
@@ -16,9 +18,10 @@ export default function Footer() {
     </div>
     
     
+    <div className=' items-center object-center'>
+        <div className='md:flex mt-5  justify-start items-start gap-5 text-2xl'>
 
-    <div className='md:flex mt-5  justify-start items-start gap-5 text-2xl'>
-  <div className='capitalize block leading-loose mb-5'>
+  <div className='capitalize sm:block md:block items-center object-center leading-loose mb-5'>
     <h2 className=' text-4xl'>Pages</h2>
     
       <div className='block'>
@@ -33,15 +36,15 @@ export default function Footer() {
 
 {/* <div className='capitalize block'>
   <h2>Trending</h2>
-      <ol>
-        <PageLinks title="Esport" link='/'/>
-        <PageLinks  title="Upcoming Games" link='/'/>
-        <PageLinks  link='/'/>
-        <PageLinks  link='/'/>
-        <PageLinks  link='/'/>
-        <PageLinks link='/'/>
+  <ol>
+      <PageLinks title="Esport" link='/'/>
+      <PageLinks  title="Upcoming Games" link='/'/>
+      <PageLinks  link='/'/>
+      <PageLinks  link='/'/>
+      <PageLinks  link='/'/>
+      <PageLinks link='/'/>
       </ol>
-    
+      
   </div>  */}
 
 <div className='capitalize block pb-2 leading-loose'>
@@ -56,12 +59,14 @@ export default function Footer() {
       </div>
     
   </div>      
+        </div>
 
     </div>
 
-        <div className=' bottom-4 justify-center text-center'>
+        <div className=' bottom-4 justify-center items-center border-2 border-gray-400 p-4 text-center'>
         <h2>Copyright &copy; 2024 GamingNow | Designed by ByteProwler - Powered by Alcatraz</h2>
         </div>
+      </div>
    </footer>
   )
 }

@@ -9,7 +9,7 @@ const Viju = Acme({
   weight:['400']});
 
 export const metadata = {
-  title: "Blogging Platform",
+  title: "GamingNow",
   description: "My Blogging Platform",
   keywords: "html, cssc tailwindcss, js, javascript, next, vite"
 };

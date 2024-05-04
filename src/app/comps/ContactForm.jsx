@@ -2,16 +2,28 @@
 
 export default function ContactForm() {
   return (
-    <div>
-       <h2 className=" mt-20 text-6xl justify-center mb-10">Connect with Us</h2>
+    <form className="max-w-md my-auto mx-auto shadow-md leading-relaxed">
+       <h2 className="text-xl font-semibold mb-6 mt-10">Connect with Us</h2>
             <div>
-            <input type="text" id="name" name="name" placeholder="Your Name" className="border-b-2 mb-4 dark:border-white border-black focus:border-gray-900 focus:outline-none h-[100px] sm:w-[250px] md:w-[450px]" /> <br />
-            <input type="email" id="email" name="email" placeholder="Your Email" className="border-b-2 mb-4 dark:border-white border-black focus:border-gray-900 focus:outline-none md:h-[80px] sm:w-[250px] md:w-[450px]" /><br />
-            <input type="text" id="subject" name="subject" placeholder="Subject" className="border-b-2 mb-4 dark:border-white border-black focus:border-gray-900 focus:outline-none h-[100px] sm:w-[250px] md:w-[450px]" /><br />
-            <textarea className="border-b-2 mb-4 border-black dark:border-white focus:outline-none resize h-[150px] sm:w-[200px] md:w-[400px]" name="message" id="message" cols="10" rows="4" placeholder="Type Your Message"></textarea><br />
-            <button type="submit" className=" bg-slate-700 text-white text-center h-[80px] md:w-[250px] rounded-sm hover:bg-purple-700">Submit</button>
+              <div className="mb-2">
+            <input type="text" id="name" name="name" placeholder="Your Name" className=" block w-full border-b-2 shadow-sm focus:outline-none" required /> <br />
+              </div>
+
+              <div className=" mb-4">
+            <input type="email" id="email" name="email" placeholder="Your Email" className="block w-full border-b-2 focus:outline-none" required /><br />
+              </div>
+
+              <div className=" mb-2">
+            <input type="text" id="subject" name="subject" placeholder="Subject" className="mt-1 block w-full border-b-2 focus:outline-none" required /><br />
+              </div>
+
+              <div>
+            <textarea className="mt-1 block w-full border-b-2 shadow-sm focus:outline-none" required name="message" id="message" cols="5" rows="4" placeholder="Type Your Message"></textarea><br />
+              </div>
+
+            <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2">Submit</button>
     </div>
-    </div>
+    </form>
   ) 
 }
  

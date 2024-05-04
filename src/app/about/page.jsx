@@ -151,7 +151,7 @@ export default function page() {
                 <h2 className=" text-8xl pb-12">Feel Free to Reach Out!</h2>
                 <p className=" text-[20px] mb-14 leading-loose">Don't hesitate to get in touch with us. We're here to help and eager to hear from you</p>
 
-                <div className="mb-4 ">
+                <div className="mb-4 text-4xlm  ">
 
                   <Link className="flex mb-10 text-xl" href="mailto:joshuaexcellency@gmail.com.com">
                     <FaEnvelope className="hover:text-white p-2 rounded-full border"/><span className="hover:text-pink-500">Email</span>

@@ -7,6 +7,7 @@ export const articles = [
       title: "Exploring the Latest Advancements in Mobile Technology",
       category: "Mobile-Tech",
       author: "John Smith",
+      introduction: "Stay ahead of the curve with insights into mobile tech innovations.",
       description: [
         "Exploring the latest advancements in mobile technology.",
         "From foldable screens to 5G connectivity, the mobile tech landscape is constantly evolving.",
@@ -23,6 +24,7 @@ export const articles = [
       title: "Reviewing the Hottest Mobile Games of the Season",
       category: "Mobile-Gaming",
       author: "Emily Johnson",
+      introduction: "Dive into the world of mobile gaming and discover top titles.",
       description: [
         "Reviewing the hottest mobile games of the season.",
         "From addictive puzzle games to immersive RPGs, the world of mobile gaming offers something for everyone.",
@@ -36,6 +38,8 @@ export const articles = [
       title: "Diving Deep into the World of Battle Royale Games",
       category: "Battle-Royale-Games",
       author: "Michael Brown",
+      introduction: "Immerse yourself in the adrenaline-fueled world of battle royale gaming.",
+ 
       description: [
         "Diving deep into the world of battle royale games.",
         "Analyzing strategies, updates, and player communities, this article offers a comprehensive look at the popular gaming genre.",
@@ -49,6 +53,7 @@ export const articles = [
       title: "Keeping Up with the Latest Samsung Devices",
       category: "Samsung",
       author: "Jessica Martinez",
+      introduction: "Discover the latest innovations in Samsung's cutting-edge devices.",
       description: [
         "Keeping up with the latest Samsung devices.",
         "From smartphones to tablets to smartwatches, Samsung continues to innovate in the tech industry.",
@@ -62,6 +67,7 @@ export const articles = [
       title: "Unveiling the Newest Features and Updates of the iPhone",
       category: "iPhone",
       author: "David Anderson",
+      introduction:  "Discover what's next in the world of iPhones.",
       description: [
         "Unveiling the newest features and updates of the iPhone.",
         "As Apple's flagship product, the iPhone sets the standard for smartphones worldwide.",
@@ -75,6 +81,7 @@ export const articles = [
       title: "Covering the Competitive Gaming Scene",
       category: "eSports",
       author: "Sophia Clark",
+      introduction: "Get an insider's look into the world of competitive gaming.",
       description: [
         "Covering the competitive gaming scene.",
         "From major tournaments to emerging esports stars, esports has become a global phenomenon.",

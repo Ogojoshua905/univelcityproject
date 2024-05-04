@@ -63,7 +63,7 @@ export default function Footer() {
 
     </div>
 
-        <div className=' bottom-4 justify-center items-center border-2 border-gray-400 p-4 text-center'>
+        <div className=' bottom-4 object-center border-2 border-gray-400 p-4 text-center'>
         <h2>Copyright &copy; 2024 GamingNow | Designed by ByteProwler - Powered by Alcatraz</h2>
         </div>
       </div>

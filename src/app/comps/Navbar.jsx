@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { BiSolidJoystick } from "react-icons/bi"
 import { FaAngleDown } from 'react-icons/fa'
 import Button from './Button'
+import { motion } from 'framer-motion'
 import { RxHamburgerMenu } from "react-icons/rx";
 import ThemeSwitch from './ThemeSwitch'
 import { useState } from 'react'
@@ -20,7 +21,7 @@ export default function Navbar( ) {
   }
 
   return (
-    <nav className='border-gray-950 dark:border-white border-y-2 sm:block md:flex justify-between items-center text-2xl capitalize font-bold mt-20'>
+    <nav className='border-gray-950 dark:border-red-500 border-y-4 sm:block md:flex justify-between items-center text-2xl capitalize font-bold mt-20'>
 
     
     
@@ -60,20 +61,20 @@ export default function Navbar( ) {
     <div className='dark:border-white flex items-center space-x-4'>
 
         
-          <Link className='p-2' href="/">
+          <Link className='p-2  hover:border-b-red-500 border-b-4' href="/">
             Home
             </Link>
             
 
        
             
-          <Link className='p-2' href="/about">
+          <Link className='p-2 hover:border-b-yellow-400 border-b-4' href="/about">
             About
             </Link>
             
             
         
-          <Link className='p-2' href="/category">
+          <Link className='p-2 hover:border-b-blue-700 border-b-4' href="/category">
             Blog
             </Link>
             
@@ -103,7 +104,9 @@ export default function Navbar( ) {
     
 
     {isClick && (
-      <div className='md:hidden block px-2 pt-2 pb-3 space-y-1 sm:px-3'>
+      <motion.div
+        
+      className='md:hidden block px-2 pt-2 pb-3 space-y-1 sm:px-3'>
             
             <Link className='p-2' href="/">
             Home
@@ -143,7 +146,7 @@ export default function Navbar( ) {
         <Input type="email" userid="email" place="Enter Email" /><Button className="p-3" status="subscribe" />
     </div>
             
-      </div>
+      </motion.div>
           
     )}
     </nav>

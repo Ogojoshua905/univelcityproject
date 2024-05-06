@@ -67,7 +67,7 @@ export const articles = [
       title: "Unveiling the Newest Features and Updates of the iPhone",
       category: "iPhone",
       author: "David Anderson",
-      introduction:  "Discover what's next in the world of iPhones.",
+      introduction: "Discover what's next in the world of iPhones.",
       description: [
         "Unveiling the newest features and updates of the iPhone.",
         "As Apple's flagship product, the iPhone sets the standard for smartphones worldwide.",

@@ -131,8 +131,8 @@ export default function Home() {
             
       </div>
 
-      <div className="p-4 mt-10 pr-48 pl-48">
-        <h2 className="border-black bg-purple-700 p-5">Latest Blog </h2>
+      <div className="py-2 mb-4 px-4 mt-10 pr-48 pl-48">
+        <h2 className="w-full border-black bg-purple-700 p-5">Latest Blog </h2>
       </div>
 
 

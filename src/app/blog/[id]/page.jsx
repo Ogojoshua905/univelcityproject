@@ -1,36 +1,44 @@
-import { articles } from "@/app/category/page" 
-import Image from "next/image"
+"use client"
+import { articles } from "@/app/page";
+import Image from "next/image";
+import Link from "next/link";
 
-export default function BlogSection({params}) {
-    
-    const blogpost = articles.find(post => post.title.split(' ').join('-') == params.id)
-  
-    const relatedBlog = articles.filter(articles => (articles.category == blogpost.category) && (articles.title !== blogpost.title ))
+export default function BlogSection({ params }) {
+    const blogpost = articles.find(post => post.title.split(' ').join('-') === params.id);
 
-    return(
-        <div className="w-4/5 m-auto text-3xl">
-            <Image src={`/media/${blogpost.category}.jpg`} alt={blogpost.title} width="500" height="500" />
-            <h2>{blogpost.title}</h2>
-            <h2>Description</h2>
-            {
-                blogpost.description.map((para,index) => (
-                    <p key={index}>{para}</p>
-                ) )
-            }
+    // Check if blogpost exists before filtering relatedBlog
+    const relatedBlog = blogpost ? articles.filter(article => (
+        article.category === blogpost.category && article.title !== blogpost.title
+    )) : [];
 
-            <section className="h-[400px] py-8 uppercase">
-                <h2>related content</h2>
-                <div className="grid grid-cols-2 gap-4 mb-7 object-cover pl-4 pr-4">
-      {relatedBlog.map(articles => (
-        <Link key={articles.id} href={`/blog/${articles.title.split(' ').join('-')}`} title={articles.title}>
-        <section  className={`bg-cover h-[300px]`} style={{backgroundImage: `url(/media/${articles.category}.jpg)`}}>
-            <h2>{articles.title}</h2>
-        </section>
-        </Link>
-      ))}
-    </div>
-            </section>
+    return (
+        <div className=" pl-10">
+            {blogpost && (
+                <Image className="object-center object-fill items-center my-8" src={`/media/${blogpost.category}.jpg`} alt={blogpost.title} width="500" height="500" />
+            )}
+            {blogpost && (
+                <>
+                    <h2 className="text-3xl text-center">{blogpost.title}</h2>
+                    <h2 className="text-2xl text-center">Description</h2>
+                    {blogpost.description.map((para, index) => (
+                        <p className="items-center text-center leading-relaxed" key={index}>{para}</p>
+                    ))}
+                </>
+            )}
+            {blogpost && (
+                <section className="h-[400px] py-8">
+                    <h2 className="text-3xl uppercase">related content</h2>
+                    <div className="grid grid-cols-2 gap-4 mb-7 object-cover pl-4 pr-4">
+                        {relatedBlog.map(article => (
+                            <Link key={article.id} href={`/blog/${article.title.split(' ').join('-')}`} title={article.title}>
+                                <section className={`bg-cover h-[300px]`} style={{ backgroundImage: `url(/media/${article.category}.jpg)` }}>
+                                    <h2>{article.title}</h2>
+                                </section>
+                            </Link>
+                        ))}
+                    </div>
+                </section>
+            )}
         </div>
-    )
-  }
-  
+    );
+}

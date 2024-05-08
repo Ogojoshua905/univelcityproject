@@ -18,7 +18,12 @@ export default function Navbar( ) {
 
   const toggleNavBar = () => {
     setisClick(!isClick)
-  }
+  };
+
+  const closeNavBar = () => {
+    setisClick(false);
+  };
+
 
   return (
     <nav className='border-gray-950 dark:border-red-500 border-y-4 sm:block md:flex justify-between items-center text-2xl capitalize font-bold mt-20'>
@@ -31,13 +36,19 @@ export default function Navbar( ) {
       <Link className="" href="/">
       <div className='flex'>
     <BiSolidJoystick className='text-4xl' />
-      <span>GamingNow</span>
+      <span className='md:flex hidden'>TechGamer Nexus</span>
+      <motion.span
+       initial={{ height: 0, opacity: 0 }}
+       animate={{ height: "auto", opacity: 1 }}
+       exit={{ height: 0, opacity: 0 }}
+       transition={{ duration: 0.3 }}
+       className=' md:hidden flex cursor-pointer'>TGN</motion.span>
       </div>
       </Link>
 
 
         <div className='items-center md:hidden flex cursor-pointer' onClick={toggleNavBar} >
-        {/* <RxHamburgerMenu className='w-6' /> */}
+        
     
         <button className=' items-center justify-center p-2 '>
 
@@ -61,20 +72,20 @@ export default function Navbar( ) {
     <div className='dark:border-white flex items-center space-x-4'>
 
         
-          <Link className='p-2  hover:border-b-red-500 border-b-4' href="/">
+          <Link className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-red-500' href="/">
             Home
             </Link>
             
 
        
             
-          <Link className='p-2 hover:border-b-yellow-400 border-b-4' href="/about">
+          <Link className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-yellow-500' href="/about">
             About
             </Link>
             
             
         
-          <Link className='p-2 hover:border-b-blue-700 border-b-4' href="/category">
+          <Link className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-blue-500' href="/category">
             Blog
             </Link>
             
@@ -105,35 +116,38 @@ export default function Navbar( ) {
 
     {isClick && (
       <motion.div
-        
+      initial={{ height: 0, opacity: 0 }}
+      animate={{ height: "auto", opacity: 1 }}
+      exit={{ height: 0, opacity: 0 }}
+      transition={{ duration: 0.3 }}
       className='md:hidden block px-2 pt-2 pb-3 space-y-1 sm:px-3'>
             
-            <Link className='p-2' href="/">
+            <Link className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-red-500' href="/" onClick={closeNavBar}>
             Home
             </Link>
             
 
        
             
-          <Link className='p-2 block' href="/about">
-            About
+          <Link className=' block' href="/about" onClick={closeNavBar}>
+           <span className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-yellow-500'>About</span>
             </Link>
             
             
         
-          <Link className='p-2 block' href="/category">
-            Blog
+          <Link className='block' href="/category" onClick={closeNavBar}>
+            <span className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-blue-500'>Blog</span>
             </Link>
             
             
         
-          <Link className='p-2 block' href="/description">
-            Category
+          <Link className='block' href="/description" onClick={closeNavBar}>
+            <span className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-orange-500'>Category</span>
             </Link>
             
         
-          <Link className='p-2 block' href="/contact">
-            Contact
+          <Link className='block' href="/contact" onClick={closeNavBar}>
+            <span className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-violet-500'>Contact</span>
             </Link>
             
 

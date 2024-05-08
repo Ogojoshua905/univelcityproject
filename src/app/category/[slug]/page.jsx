@@ -1,4 +1,5 @@
-import { articles } from "../page"
+"use client"
+import { articles } from "@/app/page"
 
 
 export default function CategorySlug({params}) {

@@ -2,8 +2,8 @@
 
 export default function ContactForm() {
   return (
-    <form className="max-w-md my-auto mx-auto shadow-md leading-relaxed">
-       <h2 className="text-xl font-semibold mb-6 mt-10">Connect with Us</h2>
+    <form className="max-w-md my-auto mx-auto leading-10">
+       <h2 className="text-3xl font-semibold mb-6 mt-10">Connect with Us</h2>
             <div>
               <div className="mb-2">
             <input type="text" id="name" name="name" placeholder="Your Name" className=" block w-full border-b-2 shadow-sm focus:outline-none" required /> <br />
@@ -21,7 +21,7 @@ export default function ContactForm() {
             <textarea className="mt-1 block w-full border-b-2 shadow-sm focus:outline-none" required name="message" id="message" cols="5" rows="4" placeholder="Type Your Message"></textarea><br />
               </div>
 
-            <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2">Submit</button>
+            <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 hover:bg-indigo-700 focus:outline-none rounded-md focus:ring-2 focus:ring-offset-2">Submit</button>
     </div>
     </form>
   ) 

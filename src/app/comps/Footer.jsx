@@ -12,8 +12,8 @@ export default function Footer() {
     
     <div className=" flex-col md:gap-y-6">
     
-    <Link href="/" className='text-3xl hover:cursor-pointer mt-5 md:flex gap-x-3'><BiSolidJoystick className=' mb-5 items-center ml-2 leading-6' />GamingNow</Link>
-        <p className='leading-6 mb-5'>Thank you for choosing GamingNow as your go-to <br /> platform for all things gaming</p>
+    <Link href="/" className='text-3xl hover:cursor-pointer mt-5 md:flex gap-x-3'><BiSolidJoystick className=' mb-5 items-center ml-2 leading-6' />TechGamer Nexus</Link>
+        <p className='font-bold mb-5'>Where Tech Meets Play</p>
         <SocialIcons />
     </div>
     

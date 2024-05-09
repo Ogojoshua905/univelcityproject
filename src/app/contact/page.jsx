@@ -47,7 +47,7 @@ export default function page() {
         className="justify-center text-center mt-7 text-7xl">Elevate Your Digital Journey: Explore with Us Today</motion.h1>
 
         <section className="justify-center object-center items-center md:mt-6  md:ml-11 md:mr-11">
-            <Image className="w-[1500px]  h-[500px]" src="/media/chatting.jpg" height="300" width="1000" alt="People Discussing"/>
+            <Image className="sm:w-full sm:h-auto md:w-[170vh] ml-9 md:h-[70vh] bg-cover md:pl-12 md:mx-auto py-12" src="/media/chatting.jpg" height="300" width="1000" alt="People Discussing"/>
         </section>
 
         <section className=" md:grid md:grid-cols-2 sm:grid-cols-1 mt-28 pl-28 pr-28  md:mb-32">

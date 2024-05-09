@@ -7,216 +7,179 @@ import Button from "./comps/Button"
 
 
 export const articles = [
-  {
-    id: 1,
-    title: "Exploring the Latest Advancements in Mobile Technology",
-    category: "Mobile-Tech",
-    author: "John Smith",
-    introduction: "Stay ahead of the curve with insights into mobile tech innovations.",
-    description: [
-      "Exploring the latest advancements in mobile technology.",
-      "From foldable screens to 5G connectivity, the mobile tech landscape is constantly evolving.",
-      "With each new release, smartphones become more powerful and versatile, reshaping how we communicate, work, and entertain ourselves.",
-      "This article delves into the cutting-edge innovations driving the mobile industry forward, offering insights into what the future holds for mobile devices.","Comparing the latest mobile devices in terms of performance, camera quality, and battery life.",
-      "With so many options on the market, choosing the right smartphone can be overwhelming.",
-      "This article provides side-by-side comparisons of popular devices, helping readers make informed purchasing decisions.",
-      "Whether you're interested in flagship models or budget-friendly options, you'll find valuable insights in this article."
-    ],
-    date: "2024-03-28"
+{
+id: 1,
+title: "Exploring the Latest Advancements in Mobile Technology",
+category: "Mobile-Tech",
+author: "John Smith",
+introduction: "Stay ahead of the curve with insights into mobile tech innovations and their impact on our lives, from foldable screens to 5G connectivity.",
+description: [
+"Mobile technology is constantly evolving, and it's essential to stay informed about the latest advancements. From foldable screens to 5G connectivity, the mobile tech landscape is changing rapidly. In this article, we'll delve into the cutting-edge innovations driving the mobile industry forward, offering insights into what the future holds for mobile devices. We'll explore the latest advancements in smartphone technology, including improved camera capabilities, enhanced battery life, and sleeker designs. Additionally, we'll discuss the impact of mobile technology on our daily lives, from how we communicate and work to how we entertain ourselves. Whether you're a tech enthusiast or simply curious about the latest mobile trends, this article has something for everyone."
+],
+date: "2024-03-28"
+}, {
+id: 2,
+title: "Reviewing the Hottest Mobile Games of the Season",
+category: "Mobile-Gaming",
+author: "Emily Johnson",
+introduction: "Discover the top mobile games of the season, from addictive puzzles to immersive RPGs, and find out what makes them so engaging.",
+description: [
+"Mobile gaming has become an integral part of our entertainment landscape, offering a wide range of genres and gameplay experiences. In this article, we'll review the hottest mobile games of the season, from addictive puzzles like Tetris and Candy Crush to immersive RPGs like Final Fantasy and Pokémon. We'll explore what makes these games so engaging, including their mechanics, graphics, and player feedback. Whether you're a casual gamer or a hardcore enthusiast, you'll find something to enjoy in this article."
+],
+date: "2024-03-28"
+}, {
+id: 3,
+title: "Diving Deep into the World of Battle Royale Games",
+category: "Battle-Royale-Games",
+author: "Michael Brown",
+introduction: "Explore the thrilling world of battle royale games, from Fortnite to PUBG, and uncover their secrets to success.",
+description: [
+"Battle royale games have taken the gaming world by storm, offering a unique blend of strategy, skill, and luck. In this article, we'll dive deep into the world of battle royale games, exploring their history, mechanics, and player psychology. We'll analyze the most popular titles, including Fortnite, PUBG, and Call of Duty: Warzone, and discuss their secrets to success. Whether you're a seasoned gamer or a newcomer to the genre, you'll find valuable insights and tips in this article."
+],
+date: "2024-03-28"
+}, {
+id: 4,
+title: "Keeping Up with the Latest Samsung Devices",
+category: "Samsung",
+author: "Jessica Martinez",
+introduction: "Get the latest scoop on Samsung's cutting-edge devices, from smartphones to smartwatches and beyond, and discover their innovative features.",
+description: [
+"Samsung is a leading player in the tech industry, constantly pushing the boundaries of innovation and design. In this article, we'll explore the latest Samsung devices, from smartphones like the Galaxy S and Note series to smartwatches like the Galaxy Watch. We'll delve into their features, specifications, and pricing, helping you make informed purchasing decisions. Whether you're a loyal Samsung fan or simply curious about their latest offerings, this article has something for everyone."
+],
+date: "2024-03-28"
+}, 
+{
+id: 5,
+title: "Unveiling the Newest Features and Updates of the iPhone",
+category: "iPhone",
+author: "David Anderson",
+introduction: "Uncover the latest advancements in iPhone technology, from camera improvements to software updates, and discover how they enhance your user experience.",
+description: [
+"The iPhone is one of the most popular smartphones on the market, known for its sleek design, user-friendly interface, and innovative features. In this article, we'll explore the newest features and updates of the iPhone, from camera improvements like Night mode and Portrait mode to software updates like iOS 17. We'll discuss how these advancements enhance your user experience, from improved performance and security to new apps and functionality. Whether you're an iPhone enthusiast or simply curious about the latest updates, this article has something for everyone."
+],
+date: "2024-03-28"
+},
+{
+  id: 6,
+  title: "Covering the Competitive Gaming Scene",
+  category: "eSports",
+  author: "Sophia Clark",
+  introduction: "Dive into the exciting world of competitive gaming, from major tournaments to emerging esports stars, and discover the latest trends and developments.",
+  description: [
+  "Competitive gaming, or esports, has become a global phenomenon, with millions of fans tuning in to watch top players and teams battle it out in popular games like League of Legends, Dota 2, and Overwatch. In this article, we'll cover the latest developments in the competitive gaming scene, from major tournaments like the League of Legends World Championship and the Fortnite World Cup to emerging esports stars and teams. We'll also explore the latest trends in esports, including the rise of new games and genres, the growth of esports betting, and the increasing importance of mental health and wellness for professional gamers. Whether you're a hardcore gamer or just curious about the world of competitive gaming, this article has something for everyone."
+  ],
+  date: "2024-03-28"
+},
+{
+  id: 7,
+  title: "Bringing You the Latest News, Analysis, and Highlights from the World of Sports",
+  category: "Sports",
+  author: "Andrew Wilson",
+  introduction: "Stay updated on the world of sports with expert analysis, highlights, and news from top leagues and events, from football to basketball and beyond.",
+  description: [
+  "Sports are a universal language, transcending borders and cultures. In this article, we'll bring you the latest news, analysis, and highlights from the world of sports, covering top leagues and events like the NFL, NBA, MLB, and more. Our expert analysts will provide in-depth commentary on the latest developments, from player injuries to championship wins. Whether you're a die-hard fan or a casual observer, you'll find something to enjoy in this article."
+  ],
+  date: "2024-03-28"
   },
   {
-    id: 2,
-    title: "Reviewing the Hottest Mobile Games of the Season",
-    category: "Mobile-Gaming",
-    author: "Emily Johnson",
-    introduction: "Dive into the world of mobile gaming and discover top titles.",
+    id: 8,
+    title: "Informing Readers about Cyber Threats and Best Practices for Online Safety",
+    category: "Cyber-Security",
+    author: "Rachel Turner",
+    introduction: "Protect yourself online with essential cybersecurity insights, tips, and best practices for a safer digital experience, from password management to malware protection.",
     description: [
-      "Reviewing the hottest mobile games of the season.",
-      "From addictive puzzle games to immersive RPGs, the world of mobile gaming offers something for everyone.",
-      "This article highlights standout titles, discussing gameplay mechanics, graphics, and player feedback.",
-      "Whether you're a casual gamer or a hardcore enthusiast, you'll find recommendations and insights to enhance your gaming experience."
+    "Cybersecurity is a critical concern in today's digital age, as threats like hacking, phishing, and malware become increasingly sophisticated. In this article, we'll inform readers about the latest cyber threats and provide best practices for online safety, from password management and two-factor authentication to malware protection and software updates. Whether you're a tech novice or an experienced user, you'll find valuable advice in this article."
     ],
     date: "2024-03-28"
-  },
-  {
-    id: 3,
-    title: "Diving Deep into the World of Battle Royale Games",
-    category: "Battle-Royale-Games",
-    author: "Michael Brown",
-    introduction: "Immerse yourself in the adrenaline-fueled world of battle royale gaming.",
+    },
 
-    description: [
-      "Diving deep into the world of battle royale games.",
-      "Analyzing strategies, updates, and player communities, this article offers a comprehensive look at the popular gaming genre.",
-      "From Fortnite to PUBG, battle royale games have captured the attention of millions worldwide.",
-      "Whether you're a seasoned veteran or a newcomer, you'll find valuable tips and insights to help you dominate the battlefield."
-    ],
-    date: "2024-03-28"
-  },
-  {
-    id: 4,
-    title: "Keeping Up with the Latest Samsung Devices",
-    category: "Samsung",
-    author: "Jessica Martinez",
-    introduction: "Discover the latest innovations in Samsung's cutting-edge devices.",
-    description: [
-      "Keeping up with the latest Samsung devices.",
-      "From smartphones to tablets to smartwatches, Samsung continues to innovate in the tech industry.",
-      "This article explores the features and capabilities of the newest Samsung products, providing in-depth reviews and comparisons.",
-      "Whether you're considering a purchase or simply curious about the latest tech trends, this article has you covered."
-    ],
-    date: "2024-03-28"
-  },
-  {
-    id: 5,
-    title: "Unveiling the Newest Features and Updates of the iPhone",
-    category: "iPhone",
-    author: "David Anderson",
-    introduction: "Discover what's next in the world of iPhones.",
-    description: [
-      "Unveiling the newest features and updates of the iPhone.",
-      "As Apple's flagship product, the iPhone sets the standard for smartphones worldwide.",
-      "This article discusses the latest advancements in iPhone technology, from camera improvements to software updates.",
-      "Whether you're a devoted Apple fan or a curious observer, you'll find valuable insights and analysis in this article."
-    ],
-    date: "2024-03-28"
-  },
-  {
-    id: 6,
-    title: "Covering the Competitive Gaming Scene",
-    category: "eSports",
-    author: "Sophia Clark",
-    introduction: "Get an insider's look into the world of competitive gaming.",
-    description: [
-      "Covering the competitive gaming scene.",
-      "From major tournaments to emerging esports stars, esports has become a global phenomenon.",
-      "This article provides in-depth coverage of the esports industry, discussing player salaries, sponsorship deals, and the growing popularity of competitive gaming.",
-      "Whether you're a hardcore esports fan or a newcomer to the scene, this article offers valuable insights into this exciting world."
-    ],
-    date: "2024-03-28"
-  },
+    {
+      id: 9,
+      title: "Exploring Cutting-Edge Innovations in Cyber Technology",
+      category: "Cyber-Technology",
+      author: "Kevin Harris",
+      introduction: "Discover the latest advancements in cyber technology, from AI-driven solutions to blockchain developments, and learn how they're transforming industries and revolutionizing the digital landscape.",
+      description: [
+      "Cyber technology is constantly evolving, with innovations like artificial intelligence, blockchain, and the Internet of Things (IoT) transforming industries and revolutionizing the digital landscape. In this article, we'll explore the latest advancements in cyber technology, discussing their potential impact on fields like healthcare, finance, and transportation. Whether you're a tech enthusiast or a curious observer, you'll find something fascinating in this article."
+      ],
+      date: "2024-03-28"
+      },
 
-      {
-        id: 7,
-        title: "Bringing You the Latest News, Analysis, and Highlights from the World of Sports",
-        category: "Sports",
-        author: "Andrew Wilson",
-        introduction: "Stay updated on the world of sports with expert analysis and highlights.",
-        description: [
-          "From football to basketball to soccer, sports fans have plenty to cheer about.",
-          "This article covers the biggest stories and matchups in the sports world, offering expert analysis and commentary.",
-          "Whether you're a die-hard fan or a casual observer, you'll find something to enjoy in this article."
-        ],
-        date: "2024-03-28"
-      },
-      {
-        id: 8,
-        title: "Informing Readers about Cyber Threats and Best Practices for Online Safety",
-        category: "Cyber-Security",
-        author: "Rachel Turner",
-        introduction: "Protect yourself online with essential cybersecurity insights.",
-        description: [
-          "With cyber attacks on the rise, it's more important than ever to protect yourself online.",
-          "This article highlights common security threats, such as phishing scams and malware, and offers practical tips for safeguarding your personal information.",
-          "Whether you're a novice or an expert, you'll find valuable advice in this article."
-        ],
-        date: "2024-03-28"
-      },
-      {
-        id: 9,
-        title: "Exploring Cutting-Edge Innovations in Cyber Technology",
-        category: "Cyber-Technology",
-        author: "Kevin Harris",
-        introduction: "Stay ahead of the curve with insights into cyber technology innovations.",
-        description: [
-          "From AI-driven cybersecurity solutions to blockchain developments, the tech landscape is constantly evolving.",
-          "This article delves into the latest advancements in cyber technology, discussing their potential impact on industries such as finance, healthcare, and transportation.",
-          "Whether you're a tech enthusiast or a curious observer, you'll find this article both informative and engaging."
-        ],
-        date: "2024-03-28"
-      },
-      {
-        id: 13,
-        title: "The Future of E-Commerce: Trends and Innovations",
-        category: "E-Commerce",
-        author: "Jessica Martinez",
-        introduction: "Get ahead of the curve with insights into the future of e-commerce.",
-        description: [
-          "E-commerce is constantly evolving, driven by advancements in technology and shifting consumer preferences.",
-          "This article explores emerging trends and innovations in the e-commerce industry, from AI-powered shopping assistants to virtual try-on experiences.",
-          "Whether you're a retailer or a consumer, stay informed about the latest developments shaping the future of online shopping."
-        ],
-        date: "2024-04-06"
-      },
-      {
-        id: 14,
-        title: "The Rise of Sustainable Fashion: Balancing Style and Ethics",
-        category: "Fashion",
-        author: "Sophie Williams",
-        introduction: "Explore the growing trend of sustainable fashion and its impact on the industry.",
-        description: [
-          "Sustainable fashion is gaining momentum as consumers become more conscious of the environmental and social impact of their clothing choices.",
-          "This article examines the principles of sustainable fashion, from ethical sourcing to eco-friendly production practices.",
-          "Whether you're a fashion enthusiast or an industry insider, discover how sustainability is reshaping the future of fashion."
-        ],
-        date: "2024-04-07"
-      },
       {
         id: 10,
         title: "Comparing the Latest Mobile Devices in Terms of Performance, Camera Quality, and Battery Life",
         category: "Mobile-Tech",
         author: "Laura Thompson",
-        introduction: "Find the perfect smartphone with our comprehensive comparison guide.",
+        introduction: "Find the perfect smartphone with our comprehensive comparison guide, covering performance, camera quality, battery life, and more, from top brands like Apple and Samsung.",
         description: [
-          "With so many options on the market, choosing the right smartphone can be overwhelming.",
-          "This article provides side-by-side comparisons of popular devices, helping readers make informed purchasing decisions.",
-          "Whether you're interested in flagship models or budget-friendly options, you'll find valuable insights in this article."
+        "With so many mobile devices on the market, choosing the right one can be overwhelming. In this article, we'll compare the latest smartphones in terms of performance, camera quality, battery life, and more, helping you make an informed purchasing decision. We'll analyze top brands like Apple and Samsung, discussing their unique features, specifications, and pricing. Whether you're due for an upgrade or simply curious about the latest mobile tech, this article has something for everyone."
         ],
         date: "2024-03-28"
-      },
-      {
-        id: 11,
-        title: "Exploring the Latest iPhone Models and Their Features",
-        category: "iPhone",
-        author: "Sophia Johnson",
-        introduction: "Stay updated on the newest iPhone releases and innovations.",
-        description: [
-          "As one of the leading smartphone brands, Apple constantly introduces new iPhone models with exciting features and improvements.",
-          "This article provides an in-depth exploration of the latest iPhone releases, discussing their design, performance, camera capabilities, and software enhancements.",
-          "Whether you're considering upgrading to a new iPhone or simply curious about the latest advancements in mobile technology, this article offers valuable insights to help you stay informed."
-        ],
-        date: "2024-03-28"
-      },
-      {
-        id: 12,
-        title: "The Role of Artificial Intelligence in Content Marketing",
-        category: "Marketing",
-        author: "John Smith",
-        introduction: "Delve into the intersection of artificial intelligence and content marketing strategies.",
-        description: [
-          "Artificial intelligence (AI) is revolutionizing content marketing, enabling brands to deliver personalized and targeted experiences to their audience.",
-          "This article explores how AI-powered tools and algorithms are reshaping content creation, distribution, and optimization.",
-          "Whether you're a content marketer or a technology enthusiast, uncover the potential of AI to drive growth and innovation in the field of marketing."
-        ],
-        date: "2024-04-05"
-      },
-      {
-        id: 15,
-        title: "The Art of Influencer Marketing: Strategies for Success",
-        category: "Marketing",
-        author: "Rachel Turner",
-        introduction: "Learn how to harness the power of influencer marketing to reach your target audience.",
-        description: [
-          "Influencer marketing has become a cornerstone of modern advertising, offering brands a unique opportunity to connect with consumers through trusted voices.",
-          "This article explores best practices and strategies for running successful influencer marketing campaigns, from identifying the right influencers to measuring ROI.",
-          "Whether you're a marketer or a business owner, unlock the potential of influencer marketing to elevate your brand and drive sales."
-        ],
-        date: "2024-04-08"
-      }
-    ];
+        },
+
+        {
+          id: 11,
+          title: "Exploring the Latest iPhone Models and Their Features",
+          category: "iPhone",
+          author: "Sophia Johnson",
+          introduction: "Stay updated on the newest iPhone releases, featuring in-depth explorations of design, performance, camera capabilities, and software enhancements, from the iPhone 15 to the latest Pro models.",
+          description: [
+          "Apple's iPhone is one of the most popular smartphones on the market, known for its sleek design, user-friendly interface, and innovative features. In this article, we'll explore the latest iPhone models, discussing their design, performance, camera capabilities, and software enhancements. We'll analyze the newest releases, from the iPhone 15 to the latest Pro models, and provide insights into their features, specifications, and pricing. Whether you're an iPhone enthusiast or simply curious about the latest updates, this article has something for everyone."
+          ],
+          date: "2024-03-28"
+          },
+
+          {
+            id: 12,
+            title: "The Role of Artificial Intelligence in Content Marketing",
+            category: "Marketing",
+            author: "John Smith",
+            introduction: "Delve into the intersection of artificial intelligence and content marketing strategies, exploring AI-powered tools and algorithms that drive engagement and conversions.",
+            description: [
+            "Artificial intelligence (AI) is revolutionizing content marketing, enabling brands to deliver personalized and targeted experiences to their audience. In this article, we'll explore the role of AI in content marketing, discussing AI-powered tools and algorithms that drive engagement and conversions. We'll analyze the benefits and challenges of implementing AI in content marketing, from improved efficiency to ethical considerations. Additionally, we'll examine how AI is transforming content creation, distribution, and measurement, and provide insights into how businesses can leverage AI to enhance their content marketing efforts. Whether you're a marketer, content creator, or business owner, you'll find valuable information in this article."
+          ],
+          date: "2024-04-01"
+          },
+
+          {
+            id: 13,
+            title: "The Future of E-Commerce: Trends and Innovations",
+            category: "E-Commerce",
+            author: "Jessica Martinez",
+            introduction: "Get ahead of the curve with insights into emerging trends and innovations in the e-commerce industry, from AI-powered shopping to virtual try-on experiences.",
+            description: [
+            "E-commerce is constantly evolving, driven by advancements in technology and shifting consumer preferences. In this article, we'll explore the future of e-commerce, discussing emerging trends and innovations like AI-powered shopping, virtual try-on experiences, and social commerce. We'll analyze the impact of these developments on the industry and provide insights into how businesses can stay ahead of the curve. Whether you're an e-commerce enthusiast or a business owner, you'll find valuable information in this article."
+            ],
+            date: "2024-04-06"
+            },
+
+            {
+              id: 14,
+              title: "The Rise of Sustainable Fashion: Balancing Style and Ethics",
+              category: "Fashion",
+              author: "Sophie Williams",
+              introduction: "Explore the growing trend of sustainable fashion, examining ethical sourcing, eco-friendly production practices, and the impact of consumer choices.",
+              description: [
+              "Sustainable fashion is becoming increasingly important, as consumers become more aware of the environmental and social impact of their clothing choices. In this article, we'll explore the rise of sustainable fashion, discussing ethical sourcing, eco-friendly production practices, and the role of consumer choices. We'll analyze the benefits and challenges of sustainable fashion, from reduced waste to higher costs, and provide insights into how the industry is evolving. Whether you're a fashion enthusiast or a conscious consumer, you'll find something valuable in this article."
+              ],
+              date: "2024-04-07"
+              },
+
+              {
+                id: 15,
+                title: "The Art of Influencer Marketing: Strategies for Success",
+                category: "Marketing",
+                author: "Rachel Turner",
+                introduction: "Learn how to harness the power of influencer marketing with strategies for identifying the right influencers, measuring ROI, and building brand awareness.",
+                description: [
+                "Influencer marketing has become a key component of modern advertising, offering brands a unique opportunity to connect with their target audience. In this article, we'll explore the art of influencer marketing, discussing strategies for identifying the right influencers, measuring ROI, and building brand awareness. We'll analyze the benefits and challenges of influencer marketing, from increased reach to authenticity concerns, and provide insights into how businesses can maximize their influencer marketing efforts. Whether you're a marketer or a business owner, you'll find valuable advice in this article."
+                ],
+                date: "2024-04-08"
+                }
+];
     
-    console.log(articles);
-    
+console.log(articles);
+
     const gridContainerVariants = {
         hidden:{opacity:0},
         show: {opacity: 1,
@@ -283,7 +246,7 @@ export default function Home() {
 
         <motion.div variants={gridSquareVariants}
          >
-          <Image className=" border-black object-fill transform hover:scale-95 transition ease-in-out duration-500" src='https://images.pexels.com/photos/9072385/pexels-photo-9072385.jpeg?auto=compress&cs=tinysrgb&w=400' alt="don't care" width='500' height='100'/>
+          <Image className=" border-black object-contain hover:scale-95 transition ease-in-out duration-500" src='https://images.pexels.com/photos/9072385/pexels-photo-9072385.jpeg?auto=compress&cs=tinysrgb&w=400' alt="Gamer" width='500' height='100'/>
         </motion.div>
 
         <motion.div
@@ -302,16 +265,16 @@ export default function Home() {
 
       <div className="md:grid md:grid-col-4 grid-rows-[repeat(5)] mt-10 leading-loose max-w-max ml-6 border-t-2 dark:border-red-700 border-black">
             <div className=" col-span-1 crow-span-1 col-start-1 pt-10 px-4 border-2  border-black border-l-0 dark:border-red-700  border-t-0" key={iPhone.id}>
-            <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 hover:bg-gradient-to-br from-black to-white rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2"><Link href="/">{iPhone.category}</Link></button>
+            <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 hover:bg-gradient-to-br from-black to-white rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2"><Link href={`/category/${iPhone.category}`}>{iPhone.category}</Link></button>
               <p className="text-3xl font-bold hover:text-purple-500 hover:transition-all">{iPhone.title}</p>
               <p className=" text-xl pb-16"> {iPhone.description[1]}</p>
               <p className=" mt-[2px] text-2xl">{new Date(iPhone.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
             </div>
 
             <div className=" col-span-1 row-span-1 col-start-2 pt-10 px-4 border-2  border-black dark:border-red-700 border-l-0  border-t-0" key={Samsung.id}>
-            <Link href="/">
+            <Link href={`/category/${Samsung.category}`}>
             <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 rounded-lg hover:bg-gradient-to-tr from-blue-600 to-white focus:outline-none focus:ring-2 focus:ring-offset-2">{Samsung.category}</button></Link>
-              <Link href="/"><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{Samsung.title}</p></Link>
+              <Link href={`/category/${Samsung.category}`}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{Samsung.title}</p></Link>
               <p className=" text-xl pb-16">{Samsung.introduction}</p>
               <p className=" mt-[2px] text-2xl">{new Date(Samsung.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
             </div>

@@ -6,11 +6,17 @@ import { BiSolidJoystick } from "react-icons/bi"
 import { FaAngleDown } from 'react-icons/fa'
 import Button from './Button'
 import { motion } from 'framer-motion'
+import { MdOutlineClose } from "react-icons/md";
+import { RiArrowDropDownLine } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
 import ThemeSwitch from './ThemeSwitch'
 import { useState } from 'react'
+import { articles } from '../page'
 
-
+const dropCat = articles.map(drop => (
+  <h2 key={drop.id}><Link href={`/blog/${drop.title.split(' ').join('-')}`} title={drop.title}>{drop.category}</Link>
+  </h2>
+)).slice(2,8)
 
 export default function Navbar( ) {
 
@@ -24,6 +30,18 @@ export default function Navbar( ) {
     setisClick(false);
   };
 
+  // const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
+
+  const [isCatDropdownOpen, setIsCatDropdownOpen] = useState(false);
+
+
+  // const toggleHomeDropdown = () => {
+  //   setIsHomeDropdownOpen(!isHomeDropdownOpen);
+  // };
+
+  const toggleCatDropdown = () => {
+    setIsCatDropdownOpen(!isCatDropdownOpen);
+  };
 
   return (
     <nav className='border-gray-950 dark:border-red-500 border-y-4 sm:block md:flex justify-between items-center text-2xl capitalize font-bold mt-20'>
@@ -52,16 +70,7 @@ export default function Navbar( ) {
     
         <button className=' items-center justify-center p-2 '>
 
-        {isClick ? (
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-</svg>
-        ) : (
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-        </svg>
-
-        )
+        {isClick ? ( <MdOutlineClose /> ) : ( <RxHamburgerMenu/>)
       }
         </button>
         </div>
@@ -71,10 +80,11 @@ export default function Navbar( ) {
       
     <div className='dark:border-white flex items-center space-x-4'>
 
-        
-          <Link className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-red-500' href="/">
-            Home
+            <Link className='p-2' href="/">
+              Home
             </Link>
+           
+          
             
 
        
@@ -91,9 +101,25 @@ export default function Navbar( ) {
             
             
         
-          <Link className='p-2' href="/description">
-            Category
-            </Link>
+            <div className="relative" onMouseEnter={toggleCatDropdown} onMouseLeave={toggleCatDropdown}>
+            <span className='p-2 flex'>
+              Category <RiArrowDropDownLine className=' hover:animate-bounce' />
+            </span>
+            {isCatDropdownOpen && (
+              <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="absolute dark:bg-black bg-white text-black dark:text-white p-5 rounded-md ">
+
+                <div className=' block'>
+                  <span className=' block p-4'>{dropCat}</span>
+                </div>
+
+              </motion.div>
+            )}
+          </div>
             
         
           <Link className='p-2' href="/contact">
@@ -122,9 +148,10 @@ export default function Navbar( ) {
       transition={{ duration: 0.3 }}
       className='md:hidden block px-2 pt-2 pb-3 space-y-1 sm:px-3'>
             
-            <Link className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-red-500' href="/" onClick={closeNavBar}>
-            Home
+            <Link href="/" className='p-2'>
+              Home 
             </Link>
+          
             
 
        
@@ -141,9 +168,25 @@ export default function Navbar( ) {
             
             
         
-          <Link className='block' href="/description" onClick={closeNavBar}>
-            <span className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-orange-500'>Category</span>
-            </Link>
+            <div className='relative' onMouseEnter={toggleCatDropdown} onMouseLeave={toggleCatDropdown}>
+            <span className='p-2 flex'>
+              Category <RiArrowDropDownLine />
+            </span>
+            {isCatDropdownOpen && (
+              <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="relative dark:bg-black bg-white text-black dark:text-white p-5 rounded-md ">
+
+                <div className=' block'>
+                  <span className=' block'>{dropCat}</span>
+                </div>
+
+              </motion.div>
+            )}
+          </div>
             
         
           <Link className='block' href="/contact" onClick={closeNavBar}>

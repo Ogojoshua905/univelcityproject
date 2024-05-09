@@ -45,7 +45,7 @@ export default function page() {
        className='justify-center text-center mt-7 text-7xl'>Focus on the Quest Objective!</motion.h1>
 
       <div className=' justify-center object-center items-center mt-6'>
-        <Image className='w-[95%] ml-9 md:h-[300px] bg-cover' src="/media/BR.jpg" alt='dont know' width="400" height="200"/>
+        <Image className='sm:w-full sm:h-auto md:w-[170vh] ml-9 md:h-[70vh] bg-cover md:pl-12 md:mx-auto py-12' src="/media/BR.jpg" alt='Gaming Equipment' width="400" height="200"/>
       </div>
 
       <div className='md:grid md:grid-cols-3 grid-rows-1 ml-12 gap-5 mr-12 mt-6 border-t-2 border-b-2 dark:border-white border-black mb-14'>
@@ -101,7 +101,7 @@ export default function page() {
           </div>
 
           <div className=' border-black dark:border-white border-4 leading-relaxed hover:duration-700 hover:ease-out hover:bg-pink-400 border-opacity-95 rounded-lg aspect-auto'>
-              <Image className='pl-24 pt-4 h-[204px] w-[324px]' src="/media/Johnsmith.jpg" width="300" height="800" alt='John Smith'/>
+              <Image className='c' src="/media/Johnsmith.jpg" width="300" height="800" alt='John Smith'/>
               <h2 className=' font-bold text-center text-2xl mt-4'>John Smith</h2>
               <h2 className='text-center italic'>Technology Enthusiast</h2>
               <p className=' ml-5 mr-5 mb-5 text-center'>"Embark on a journey through the ever-evolving world of technology with me, John Smith. As a tech enthusiast and avid explorer of innovation, I'm here to unravel the latest advancements in mobile technology and share insights that shape our digital landscape."</p>

@@ -14,7 +14,7 @@ export default function BlogSection({ params }) {
     return (
         <div className=" pl-10">
             {blogpost && (
-                <Image className="object-center object-fill items-center my-8" src={`/media/${blogpost.category}.jpg`} alt={blogpost.title} width="500" height="500" />
+                <Image className="sm:w-full sm:h-auto md:w-[170vh] ml-9 md:h-[70vh] bg-cover md:pl-12 md:mx-auto py-12" src={`/media/${blogpost.category}.jpg`} alt={blogpost.title} width="500" height="500" />
             )}
             {blogpost && (
                 <>

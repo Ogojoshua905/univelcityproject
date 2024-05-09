@@ -6,8 +6,8 @@ import { BiSolidJoystick } from 'react-icons/bi'
 
 export default function Footer() {
   return (
-   <footer className='h-[100vh] bg-gradient-to-tr from-red-500 via-indigo-500 to-blue-500 text-white sm:mx-10 mt-14 leading-6 gap-8'>
-    <div className=' lg:flex sm:block gap-x-16 px-8'>
+   <footer className='h-auto bg-gradient-to-tr from-red-500 via-indigo-500 to-blue-500 text-white mt-14 leading-6 gap-8'>
+    <div className=' lg:flex sm:block gap-x-16 px-12'>
 
     
     <div className=" flex-col md:gap-y-6">

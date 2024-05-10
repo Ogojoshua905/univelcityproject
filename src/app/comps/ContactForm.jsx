@@ -2,7 +2,7 @@
 
 export default function ContactForm() {
   return (
-    <form className="max-w-md my-auto mx-auto leading-10">
+    <form className="lg:max-w-md my-auto mx-auto leading-10">
        <h2 className="text-3xl font-semibold mb-6 mt-10">Connect with Us</h2>
             <div>
               <div className="mb-2">
@@ -14,7 +14,7 @@ export default function ContactForm() {
               </div>
 
               <div className=" mb-2">
-            <input type="text" id="subject" name="subject" placeholder="Subject" className="mt-1 block w-full border-b-2 focus:outline-none" required /><br />
+            <input type="text" id="subject" name="subject" placeholder="Subject" className="mt-1 block sm:w-auto lg:w-full border-b-2 focus:outline-none" required /><br />
               </div>
 
               <div>

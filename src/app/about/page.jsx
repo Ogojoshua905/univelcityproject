@@ -9,9 +9,13 @@ import { motion, AnimatePresence } from "framer-motion"
 import ProfIcons from '../comps/ProfIcons'
 import Button from '../comps/Button'
 import Link from 'next/link'
+import { articles } from '../page';
 
 
 export default function page() {
+
+  const blogAuth = articles.filter(auth => auth.title.split(' ').join('-'));
+
   return (
 <AnimatePresence>
 
@@ -100,51 +104,20 @@ export default function page() {
             <Button status="View Post" />
           </div>
 
-          <div className=' border-black dark:border-white border-4 leading-relaxed hover:duration-700 hover:ease-out hover:bg-pink-400 border-opacity-95 rounded-lg aspect-auto'>
-              <Image className='c' src="/media/Johnsmith.jpg" width="300" height="800" alt='John Smith'/>
-              <h2 className=' font-bold text-center text-2xl mt-4'>John Smith</h2>
-              <h2 className='text-center italic'>Technology Enthusiast</h2>
-              <p className=' ml-5 mr-5 mb-5 text-center'>"Embark on a journey through the ever-evolving world of technology with me, John Smith. As a tech enthusiast and avid explorer of innovation, I'm here to unravel the latest advancements in mobile technology and share insights that shape our digital landscape."</p>
-          </div>
+          {blogAuth.map( auth => (
+      <div key={auth.id} className="border border-black leading-loose dark:border-white hover:duration-700 hover:ease-out hover:bg-gradient-to-tr from-red-500 via-pink-600 to-pink-400 rounded-md">
+        <Link href={`/blogauthor/${auth.title.split(' ').join('-')}`} title={auth.title}>
+          <section className={` bg-cover bg-no-repeat h-52 my-4 border-black mx-8`} style={{backgroundImage: `url(/media/${auth.author}.jpg)`}}>
 
-          <div className=' border-black dark:border-white border-4 leading-relaxed hover:duration-700 hover:ease-out hover:bg-pink-400 border-opacity-95 rounded-lg aspect-auto'>
-            <Image className=' pl-24 pt-4 h-[204px] w-[324px] items-center' src="/media/Emily.jpg" width="300" height="1000" alt='Emily Johnson' />
-            <h2 className=' font-bold text-center text-2xl mt-4'>Emily Johnson</h2>
-            <h2 className=' text-center italic'>Tech Writer</h2>
-            <p className=' ml-5 mr-5 mb-5 text-center'>"Join me, Emily Johnson, on an adventure into the vibrant realm of mobile gaming. With a passion for immersive experiences and a keen eye for standout titles, I'm here to guide you through the thrilling world of mobile games and uncover hidden gems that captivate gamers of all kinds."</p>
+          </section>
 
-          </div>
-
-          <div className=' border-black dark:border-white border-4 leading-relaxed hover:duration-700 hover:ease-out hover:bg-pink-400 border-opacity-95 rounded-lg aspect-auto'>
-          <Image className=' pl-24 pt-4 pr-9 h-[204px] w-[324px] items-center' src="/media/Michael.jpg" width="300" height="1000" alt='Emily Johnson' />
-            <h2 className=' font-bold text-center text-2xl mt-4'>Michael Brown</h2>
-            <h2 className=' text-center italic'>Gaming Expert</h2>
-            <p className=' ml-5 mr-5 mb-5 text-center'>"Welcome, fellow gamers, to the battlegrounds of the digital arena! I'm Michael Brown, your guide to the heart-pounding world of battle royale games. Join me as we dive deep into strategies, analyze updates, and dominate the battlefield in games like Fortnite and PUBG."</p>
-            <ProfIcons />
-          </div>
-
-          <div className=' border-black dark:border-white border-4 leading-relaxed hover:duration-700 hover:ease-out hover:bg-pink-400 border-opacity-95 rounded-lg aspect-auto'>
-          <Image className=' pl-24 pt-4 h-[204px] w-[324px]' src="/media/Jessica.jpg" width="300" height="1000" alt='Jessica Martinez' />
-            <h2 className=' font-bold text-center text-2xl mt-4'>Jessica Martinez</h2>
-            <h2 className=' text-center italic'>Tech Journalist</h2>
-            <p className=' ml-5 mr-5 mb-5 text-center'>"Hola! I'm Jessica Martinez, your tech companion on a journey through the innovative universe of Samsung devices. From smartphones to smartwatches, join me as we explore the latest features, delve into in-depth reviews, and navigate the exciting world of Samsung technology."</p>
-          </div>
-
-          <div className=' border-black dark:border-white border-4 leading-relaxed hover:duration-700 hover:ease-out hover:bg-pink-400 border-opacity-95 rounded-lg aspect-auto'>
-          <Image className=' pl-24 pt-4 h-[204px] w-[324px]' src="/media/David.jpg" width="300" height="1000" alt='Sophia Clark' />
-            <h2 className=' font-bold text-center text-2xl mt-4'>David Anderson</h2>
-            <h2 className=' text-center italic'>Apple Afficionado</h2>
-            <p className=' ml-5 mr-5 text-center'>"Greetings, Apple aficionados! I'm David Anderson, your go-to guide for all things iPhone. Join me as we uncover the newest features, unravel software updates, and delve into the unparalleled world of Apple innovation, one iPhone at a time."</p>
-          </div>
-
-          <div className=' border-black dark:border-white border-4 leading-relaxed hover:duration-700 hover:ease-out hover:bg-pink-400 border-opacity-95 rounded-lg aspect-auto'>
-          <Image className=' pl-24 pt-4 h-[204px] w-[324px]' src="/media/Sophia.jpg" width="300" height="1000" alt='Sophia Clark' />
-            <h2 className=' font-bold text-center text-2xl mt-4'>Sophia Clark</h2>
-            <h2 className=' text-center italic'>e-Sports Journalist</h2>
-            <p className=' ml-5 mr-5 text-center'>"Greetings, esports enthusiasts! I'm Sophia Clark, your trusted source for all things competitive gaming. Join me as we journey through the electrifying world of esports, covering major tournaments, emerging stars, and the pulse-pounding excitement of competitive gaming."</p>
-
-          </div>
-        </div>
+          <h2 className=" text-center font-bold">{auth.author}</h2>
+          <p className=" text-center italic text-xl">{auth.authSpec}</p>
+          <p className="  text-center px-6">{auth.authIntro}</p>
+        </Link>
+      </div>
+    )).splice(0,6)}
+  </div>
       
         <section className=" md:grid md:grid-cols-2 mt-28 pl-28 pr-28 mb-32">
             <div>

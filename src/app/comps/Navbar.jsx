@@ -56,9 +56,9 @@ export default function Navbar( ) {
     <BiSolidJoystick className='text-4xl' />
       <span className='md:flex hidden'>TechGamer Nexus</span>
       <motion.span
-       initial={{ height: 0, opacity: 0 }}
-       animate={{ height: "auto", opacity: 1 }}
-       exit={{ height: 0, opacity: 0 }}
+       initial={{opacity: 0, x:10 }}
+       animate={{ opacity: 1, x:0 }}
+       exit={{ opacity: 0, x:10 }}
        transition={{ duration: 0.3 }}
        className=' md:hidden flex cursor-pointer'>TGN</motion.span>
       </div>

@@ -29,7 +29,7 @@ const [search, setSearch] = useState(' ');
           </div>
     
       <div className=" w-3/5 m-auto my-6 border rounded-lg">
-        <input type="text" name="search" id="search" placeholder="Search" className="w-full rounded-lg text-gray-600 py-3 outline-red-500 border-red-500" defaultValue={search} onChange={searchItems}/>
+        <input type="text" name="search" id="search" placeholder="Search" className="w-full rounded-lg text-black dark:text-gray-600 py-3 outline-red-500 border-red-500" defaultValue={search} onChange={searchItems}/>
       </div>
 
     <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-5  mx-12">
@@ -39,7 +39,7 @@ const [search, setSearch] = useState(' ');
           <section className={`bg-cover h-52 my-4 border-black mx-8`} style={{backgroundImage: `url(/media/${article.category}.jpg)`}}>
 
             <div className=" text-center">
-          <h2 className=" h-auto w-28 text-center rounded-md bg-black hover:bg-violet-500  font-bold">{article.category}</h2>
+          <h2 className=" h-auto w-28 text-center rounded-md text-white bg-black hover:bg-violet-500  font-bold">{article.category}</h2>
             </div>
           </section>
           <span className=" text-center items-center text-xl px-8">{article.title}</span>

@@ -367,7 +367,7 @@ export default function Home() {
   <div className="md:col-span-1 md:row-start-1 md:row-span-1 px-24 py-16 lg:border-t-0 sm:border-t-2">
       <h1 className=" text-3xl mb-10">Welcome</h1>
     <div className="rounded-full overflow-hidden w-36 h-36 border-white border-4 hover:border-purple-600">
-      <img className="w-full h-full object-cover" src="/media/Emily.jpg" alt="Emily" />
+      <Image className="w-full h-full object-cover" src="/media/Emily.jpg" width="234" height="150" alt="Emily" />
     </div>
 
 

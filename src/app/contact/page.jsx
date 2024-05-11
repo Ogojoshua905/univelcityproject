@@ -50,7 +50,7 @@ export default function page() {
             <Image className="sm:w-full sm:h-auto md:w-[170vh] ml-9 md:h-[70vh] bg-cover md:pl-12 md:mx-auto py-12" src="/media/chatting.jpg" height="300" width="1000" alt="People Discussing"/>
         </section>
 
-        <section className=" md:grid md:grid-cols-2 sm:grid-cols-1 mt-28 pl-28 pr-28  md:mb-32">
+        <section className="grid md:grid-cols-2 sm:grid-cols-1 mt-28 pl-28 pr-28  md:mb-32">
             <div className=" text-xl">
                 <h2 className=" sm:text-4xl md:text-8xl pb-12">Let's Get Connected!</h2>
                 <p className=" text-[20px] mb-14 md:leading-loose">Whether you have questions about our blog, categories, or authors,<br /> feel free to reach out using the form and other contact information <br /> provided on this page.</p>

@@ -9,7 +9,7 @@ export default function AuthorSection({params}) {
 
     // Check if blogpost exists before filtering relatedBlog
     const fromAuth = authPost ? articles.filter(authors => (
-        authors.category === authPost.category && authors.title !== authPost.title
+        authors.author === authPost.author && authors.title
     )) : [];
   return (
     <div className=" pl-10">
@@ -43,7 +43,7 @@ export default function AuthorSection({params}) {
                             <Link className="border border-black leading-loose py-11 dark:border-white hover:duration-700 hover:ease-out hover:bg-gradient-to-tr from-red-500 via-pink-600 to-pink-400 rounded-md" key={authors.id} href={`/blog/${authors.title.split(' ').join('-')}`} title={authors.title}>
                                 <section className={`bg-cover h-52 my-4 border-black mx-8`} style={{ backgroundImage: `url(/media/${authors.category}.jpg)` }}>
                                 
-                                
+                                {/* Content */}
                                 <h2 className=" h-auto w-28 text-center rounded-md bg-black hover:bg-violet-500  font-bold">{authors.category}</h2>
                                 </section>
 

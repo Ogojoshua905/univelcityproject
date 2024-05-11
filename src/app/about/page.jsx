@@ -132,7 +132,7 @@ export default function page() {
                   
 
                 
-                <Link className="flex mb-10 text-xl" href="tel:(+234) 9160310791"><FaPhoneAlt className="hover:text-white p-2 rounded-full border" /><span className="hover:text-pink-500">Phone</span></Link>
+                <Link className="flex mb-10 text-xl" href="tel:(+234) 809232719861"><FaPhoneAlt className="hover:text-white p-2 rounded-full border" /><span className="hover:text-pink-500">Phone</span></Link>
                 
 
                 

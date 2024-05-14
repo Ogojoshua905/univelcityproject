@@ -180,7 +180,7 @@ niche: "iPhone"
 
           {
             id: 13,
-            title: "The Future of E-Commerce: Trends and Innovations",
+            title: "The Future of E-Commerce Trends and Innovations",
             category: "E-Commerce",
             author: "Jessica-Martinez",
             introduction: "Get ahead of the curve with insights into emerging trends and innovations in the e-commerce industry, from AI-powered shopping to virtual try-on experiences.",
@@ -192,7 +192,7 @@ niche: "iPhone"
 
             {
               id: 14,
-              title: "The Rise of Sustainable Fashion: Balancing Style and Ethics",
+              title: "The Rise of Sustainable Fashion Balancing Style and Ethics",
               category: "Fashion",
               author: "Sophie-Williams",
               introduction: "Explore the growing trend of sustainable fashion, examining ethical sourcing, eco-friendly production practices, and the impact of consumer choices.",
@@ -204,7 +204,7 @@ niche: "iPhone"
 
               {
                 id: 15,
-                title: "The Art of Influencer Marketing: Strategies for Success",
+                title: "The Art of Influencer Marketing Strategies for Success",
                 category: "Marketing",
                 author: "Rachel-Turner",
                 introduction: "Learn how to harness the power of influencer marketing with strategies for identifying the right influencers, measuring ROI, and building brand awareness.",

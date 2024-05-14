@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { BiSolidJoystick } from "react-icons/bi"
 import { FaAngleDown } from 'react-icons/fa'
 import Button from './Button'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { MdOutlineClose } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -14,13 +14,17 @@ import { useState } from 'react'
 import { articles } from '../page'
 
 const dropCat = articles.map(drop => (
-  <h2 key={drop.id}><Link href={`/blog/${drop.title.split(' ').join('-')}`} title={drop.title}>{drop.category}</Link>
+  <h2 className='relative dark:text-white w-64 bg-white p-6 shadow-xl' key={drop.id}><Link href={`/blog/${drop.title.split(' ').join('-')}`} title={drop.title}>{drop.category}</Link>
   </h2>
 )).slice(2,8)
 
-export default function Navbar( ) {
+export default function Navbar() {
 
   const [isClick, setisClick] = useState(false)
+
+  const [open, setOpen] = useState(false);
+
+  const showFlyout = dropCat && open;
 
   const toggleNavBar = () => {
     setisClick(!isClick)
@@ -32,7 +36,7 @@ export default function Navbar( ) {
 
   // const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
 
-  const [isCatDropdownOpen, setIsCatDropdownOpen] = useState(false);
+  // const [isCatDropdownOpen, setIsCatDropdownOpen] = useState(false);
 
 
   // const toggleHomeDropdown = () => {
@@ -40,10 +44,16 @@ export default function Navbar( ) {
   // };
 
   const toggleCatDropdown = () => {
-    setIsCatDropdownOpen(!isCatDropdownOpen);
+    setOpen(true);
+  };
+
+  const toggleCatDropdownUp = () => {
+    setOpen(false);
   };
 
   return (
+    <AnimatePresence>
+
     <nav className='border-gray-950 dark:border-red-500 border-y-4 sm:block md:flex justify-between items-center text-2xl capitalize font-bold mt-20'>
 
     
@@ -101,22 +111,30 @@ export default function Navbar( ) {
             
             
         
-            <div className="relative" onMouseEnter={toggleCatDropdown} onMouseLeave={toggleCatDropdown}>
+            <div className="relative w-fit h-fit" onMouseEnter={toggleCatDropdown} onMouseLeave={toggleCatDropdownUp}>
+
             <span className='p-2 flex'>
               Category <RiArrowDropDownLine className=' hover:animate-bounce' />
             </span>
-            {isCatDropdownOpen && (
+            {showFlyout && (
               <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.2 }}
-              className="absolute dark:bg-black bg-white text-black dark:text-white p-5 rounded-md ">
+              initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 15 }}
+            style={{ translateX: "-50%" }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+              className=" absolute left-1/2 top-12 bg-white text-black">
 
-                <div className=' block'>
-                  <span className=' block p-4'>{dropCat}</span>
-                </div>
+              <div className=' absolute -top-6 left-0 right-0 h-6 '>
+                  
+                  <span >{dropCat}
+                  <span style={{
+                    transform: showFlyout ? "scaleX(1)" : "scale(0)",
+                  }} className='absolute -bottom-2 -left-2 h-1 origin-left scale-x-0 rounded-full bg-indigo-300 transition-transform duration-300 ease-out'/>
+                  </span>
+                
 
+                  </div>
               </motion.div>
             )}
           </div>
@@ -207,5 +225,6 @@ export default function Navbar( ) {
           
     )}
     </nav>
+    </AnimatePresence>
   )
 }

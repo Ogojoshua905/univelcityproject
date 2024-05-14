@@ -2,7 +2,9 @@
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect, useRef, useState } from "react";
 import Button from "./comps/Button"
+import ShiftingCountdown from "./comps/ShiftingCountdown";
 
 // Note when Using the Arrays Your commas may cause some error
 
@@ -230,7 +232,9 @@ console.log(articles);
         }
 export default function Home() {
 
+
   const iPhone = articles.find(game => game.category == 'iPhone')
+  const EJ = articles.find(game => game.author == 'Emily-Johnson')
   const Samsung = articles.find(game => game.category == 'Samsung')
   const MG = articles.find(game => game.category == 'Mobile-Gaming')
   const eSports = articles.find(game => game.category == 'eSports')
@@ -302,15 +306,16 @@ export default function Home() {
 
       <div className="md:grid md:grid-col-4 grid-rows-[repeat(5)] mt-10 leading-loose max-w-max ml-6 border-t-2 dark:border-red-700 border-black">
             <div className=" col-span-1 crow-span-1 col-start-1 pt-10 px-4 border-2  border-black border-l-0 dark:border-red-700  border-t-0" key={iPhone.id}>
-            <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 hover:bg-gradient-to-br from-black to-white rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2"><Link href={`/category/${iPhone.category}`}>{iPhone.category}</Link></button>
-              <p className="text-3xl font-bold hover:text-purple-500 hover:transition-all">{iPhone.title}</p>
-              <p className=" text-xl pb-16"> {iPhone.description[1]}</p>
+            <Link href={`/category/${iPhone.category}`}>
+            <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white rounded-lg bg-gradient-to-tr from-black to-blue-700 hover:from-blue-900 hover:to-black focus:outline-none focus:ring-2 focus:ring-offset-2">{iPhone.category}</button></Link>
+              <Link href={`/category/${Samsung.category}`}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{iPhone.title}</p></Link>
+              <p className=" text-xl pb-16">{iPhone.introduction}</p>
               <p className=" mt-[2px] text-2xl">{new Date(iPhone.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
             </div>
 
             <div className=" col-span-1 row-span-1 col-start-2 pt-10 px-4 border-2  border-black dark:border-red-700 border-l-0  border-t-0" key={Samsung.id}>
             <Link href={`/category/${Samsung.category}`}>
-            <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 rounded-lg hover:bg-gradient-to-tr from-blue-600 to-white focus:outline-none focus:ring-2 focus:ring-offset-2">{Samsung.category}</button></Link>
+            <button type="submit" className="w-full mb-4 py-2 px-4 border border-transparent shadow-sm text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 bg-gradient-to-tr from-green-500 to-green-700 hover:from-green-600 hover:to-green-800">{Samsung.category}</button></Link>
               <Link href={`/category/${Samsung.category}`}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{Samsung.title}</p></Link>
               <p className=" text-xl pb-16">{Samsung.introduction}</p>
               <p className=" mt-[2px] text-2xl">{new Date(Samsung.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
@@ -321,22 +326,21 @@ export default function Home() {
             </div>
             {
               <div className=" col-span-1 row-span-1 p-4 border-2 border-black border-l-0 dark:border-red-700 border-t-0" key={eSports.id}>
-                <Link href="/">
-                <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white rounded-lg bg-blue-600 hover:bg-gradient-to-br from-blue-500 via-yellow-500 to-black focus:outline-none focus:ring-2 focus:ring-offset-2">{eSports.category}</button></Link>
-                <p className=" text-3xl font-bold capitalize hover:text-purple-500 hover:transition-all"><Link href="/">{eSports.title}</Link></p>
-                <p className=" text-xl pb-16">{eSports.description[1]}</p>
-                <p className=" mt-[2px] text-2xl">{new Date(eSports.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
-
+                 <Link href={`/category/${eSports.category}`}>
+            <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 rounded-lg hover:bg-gradient-to-tr from-blue-600 to-white focus:outline-none focus:ring-2 focus:ring-offset-2">{eSports.category}</button></Link>
+              <Link href={`/category/${eSports.category}`}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{eSports.title}</p></Link>
+              <p className=" text-xl pb-16">{eSports.introduction}</p>
+              <p className=" mt-[2px] text-2xl">{new Date(eSports.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
               </div>
             }
 
             {
              <div className = "col-span-1 row-span-1 pt-10 px-4 border-2  border-black dark:border-red-800 border-l-0  border-t-0" key={BRG.id}>
-              <Link href="/">
-             <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2">{BRG.category}</button></Link>
-            <Link href="/"><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all">{BRG.title}</p></Link>
-             <p className=" text-xl pb-16"> {BRG.description[1]}</p>
-             <p className=" mt-[2px] text-2xl">{new Date(BRG.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
+               <Link href={`/category/${BRG.category}`}>
+            <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 rounded-lg hover:bg-gradient-to-tr from-blue-600 to-white focus:outline-none focus:ring-2 focus:ring-offset-2">{BRG.category}</button></Link>
+              <Link href={`/category/${BRG.category}`}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{BRG.title}</p></Link>
+              <p className=" text-xl pb-16">{BRG.introduction}</p>
+              <p className=" mt-[2px] text-2xl">{new Date(BRG.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
            </div>
             }
             
@@ -346,9 +350,12 @@ export default function Home() {
         <h2 className="w-full border-black bg-purple-700 p-5">Latest Blog </h2>
       </div>
 
+<div>
+  <ShiftingCountdown />
+</div>
 
-      <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 dark:border-red-700">
-  <div className="lg:col-span-2 sm:col-span-1 row-start-1 row-span-1 px-24 lg:border-r-2 dark:border-red-700">
+      <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3">
+  <div className="lg:col-span-2 sm:col-span-1 row-start-1 row-span-1 px-24">
     <div className="mt-8 mb-6">
       <img className="w-full h-full" src="https://images.pexels.com/photos/9072385/pexels-photo-9072385.jpeg?auto=compress&cs=tinysrgb&w=400" alt="don't care" />
     </div>
@@ -364,13 +371,22 @@ export default function Home() {
     <p>Embark on thrilling adventures, compete in epic battles, and forge unforgettable memories as you navigate through a myriad of gaming landscapes</p>
   </div>
 
-  <div className="md:col-span-1 md:row-start-1 md:row-span-1 px-24 py-16 lg:border-t-0 sm:border-t-2">
-      <h1 className=" text-3xl mb-10">Welcome</h1>
-    <div className="rounded-full overflow-hidden w-36 h-36 border-white border-4 hover:border-purple-600">
-      <img className="w-full h-full object-cover" src="/media/Emily-Johnson.jpg" alt="Emily" />
+  <div className="md:col-span-1 md:row-start-1 md:row-span-1 px-16 py-16 border-l-2 border-black">
+    <div className="border-b-2 border-black">
+      <h1 className="text-3xl mb-10">Welcome</h1>
+      <div className="rounded-full overflow-hidden w-36 h-36 border-white border-4 hover:border-purple-600">
+        <img className="w-full h-full object-cover" src="/media/Emily-Johnson.jpg" alt="Emily" />
+      </div>
+      <div className="my-8 leading-relaxed">
+        <h2 className="font-bold">Hello I am Emily Johnson</h2>
+        <p className="leading-normal">{EJ.authIntro}</p>
+      </div>
     </div>
 
-
+    {/* Categories Checkbox */}
+    <div>
+   <h1 className="text-3xl mb-10">Categories</h1>
+    </div>
   </div>
 </div>
 

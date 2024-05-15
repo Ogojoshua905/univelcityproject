@@ -78,7 +78,7 @@ export default function Navbar() {
         <div className='items-center md:hidden flex cursor-pointer' onClick={toggleNavBar} >
         
     
-        <button className=' items-center justify-center p-2 '>
+        <button className=' items-center bg-[#9050ed] justify-center p-2 '>
 
         {isClick ? ( <MdOutlineClose /> ) : ( <RxHamburgerMenu/>)
       }
@@ -166,9 +166,9 @@ export default function Navbar() {
       animate={{ height: "auto", opacity: 1 }}
       exit={{ height: 0, opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className='md:hidden block px-2 pt-2 pb-3 space-y-1 sm:px-3'>
+      className='md:hidden block px-2 pt-2 pb-3 bg-[#caacf7] space-y-1 sm:px-3'>
             
-            <Link href="/" className='p-2'>
+            <Link href="/" className='p-2 hover:text-[#9147FF]'>
               Home 
             </Link>
           
@@ -177,18 +177,18 @@ export default function Navbar() {
        
             
           <Link className=' block' href="/about" onClick={closeNavBar}>
-           <span className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-yellow-500'>About</span>
+           <span className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:text-[#9147FF]'>About</span>
             </Link>
             
             
         
           <Link className='block' href="/category" onClick={closeNavBar}>
-            <span className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-blue-500'>Blog</span>
+            <span className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:text-[#9147FF]'>Blog</span>
             </Link>
             
             <div className="relative w-fit h-fit" onMouseEnter={toggleCatDropdown} onMouseLeave={toggleCatDropdownUp}>
 
-        <span className='p-2 flex'>
+        <span className='p-2 flex hover:text-[#9147FF]'>
           Category <RiArrowDropDownLine className=' hover:animate-bounce' />
         </span>
       {showFlyout && (
@@ -239,7 +239,7 @@ export default function Navbar() {
             
         
           <Link className='block' href="/contact" onClick={closeNavBar}>
-            <span className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-violet-500'>Contact</span>
+            <span className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:text-[#9147FF]'>Contact</span>
             </Link>
             
 
@@ -247,9 +247,12 @@ export default function Navbar() {
         <ThemeSwitch />
         </div>
 
-    <div className=' flex'>
+    <div className='md:flex sm:block'>
 
-        <Input type="email" userid="email" place="Enter Email" /><Button className="p-3" status="subscribe" />
+        <input className='w-full focus:outline-none py-2 border-black border-2 block sm:w-auto lg:w-full bg-inherit' type="email" userid="email" placeholder="Enter Email" />
+        <button className=" my-4 sm:mx-auto w-full sm:items-center py-2 mx-auto border border-transparent shadow-sm text-white bg-[#9147FF] hover:bg-[#af7aff] focus:outline-none rounded-md focus:ring-2 focus:ring-offset-2">
+          Subscribe
+        </button>
     </div>
             
       </motion.div>

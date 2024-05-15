@@ -8,6 +8,6 @@ export default function Button({status}) {
     //  whileHover={{ 
     //   scale: 1.1,}}
     //   transition={{ bounceDamping: 5, bounceStiffness: 100 }}
-     className=" bg-blue-700 text-white p-3 hover:bg-red-700">{status}</motion.button>
+     className=" bg-[#9050ed] text-white p-3 hover:bg-[#ad7ef2]">{status}</motion.button>
   )
 }

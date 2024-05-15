@@ -322,7 +322,7 @@ export default function Home() {
             </div>
 
             <div className=" col-span-2 w-auto row-span-2 col-start-3">
-              <img src="/media/Talking.jpg" className="h-[700px] border-b-2 border-black"/>
+              <Image src="/media/Talking.jpg" className="h-[700px] border-b-2 border-black" width="500" height="500"/>
             </div>
             {
               <div className=" col-span-1 row-span-1 p-4 border-2 border-black border-l-0 dark:border-red-700 border-t-0" key={eSports.id}>
@@ -357,7 +357,7 @@ export default function Home() {
       <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3">
   <div className="lg:col-span-2 sm:col-span-1 row-start-1 row-span-1 px-24">
     <div className="mt-8 mb-6">
-      <img className="w-full h-full" src="https://images.pexels.com/photos/9072385/pexels-photo-9072385.jpeg?auto=compress&cs=tinysrgb&w=400" alt="don't care" />
+      <Image className="w-full h-full" src="https://images.pexels.com/photos/9072385/pexels-photo-9072385.jpeg?auto=compress&cs=tinysrgb&w=400" height="500" width='500' alt="don't care" />
     </div>
     
     <div className="flex space-x-2">
@@ -375,7 +375,7 @@ export default function Home() {
     <div className="border-b-2 border-black">
       <h1 className="text-3xl mb-10">Welcome</h1>
       <div className="rounded-full overflow-hidden w-36 h-36 border-white border-4 hover:border-purple-600">
-        <img className="w-full h-full object-cover" src="/media/Emily-Johnson.jpg" alt="Emily" />
+        <Image className="w-full h-full object-cover" src="/media/Emily-Johnson.jpg" height="500" width="500" alt="Emily" />
       </div>
       <div className="my-8 leading-relaxed">
         <h2 className="font-bold">Hello I am Emily Johnson</h2>

@@ -127,10 +127,12 @@ export default function Navbar() {
 
               <div className=' absolute -top-6 left-0 right-0 h-6 '>
                   
-                  <span >{dropCat}
                   <span style={{
                     transform: showFlyout ? "scaleX(1)" : "scale(0)",
-                  }} className='absolute -bottom-2 -left-2 h-1 origin-left scale-x-0 rounded-full bg-indigo-300 transition-transform duration-300 ease-out'/>
+                  }} className='absolute -bottom-2 -left-2 h-1 origin-left scale-x-0 rounded-full bg-indigo-300 transition-transform duration-300 ease-out'>
+
+                  <span >{dropCat}
+                  </span>
                   </span>
                 
 
@@ -184,18 +186,47 @@ export default function Navbar() {
             <span className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-blue-500'>Blog</span>
             </Link>
             
-            
+            <div className="relative w-fit h-fit" onMouseEnter={toggleCatDropdown} onMouseLeave={toggleCatDropdownUp}>
+
+        <span className='p-2 flex'>
+          Category <RiArrowDropDownLine className=' hover:animate-bounce' />
+        </span>
+      {showFlyout && (
+       <motion.div
+       initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 15 }}
+        style={{ translateX: "-50%" }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+        className=" relative left-1/2 top-12 bg-white text-black">
+
+  <div className=' relative -top-6 left-0 right-0 h-6 '>
+      
+      <span style={{
+        transform: showFlyout ? "scaleX(1)" : "scale(0)",
+      }} className='relative block -bottom-2 -left-2 h-1 origin-left scale-x-0 rounded-full bg-indigo-300 transition-transform duration-300 ease-out'>
+
+      <span className='block'>{dropCat}
+      </span>
+      </span>
+    
+
+      </div>
+  </motion.div>
+)}
+</div>
         
-            <div className='relative' onMouseEnter={toggleCatDropdown} onMouseLeave={toggleCatDropdown}>
+            {/* <div className='relative h-fit' onMouseEnter={toggleCatDropdown} onMouseLeave={toggleCatDropdownUp}>
             <span className='p-2 flex'>
               Category <RiArrowDropDownLine />
             </span>
-            {isCatDropdownOpen && (
+            {showFlyout && (
               <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.2 }}
+              initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 15 }}
+            style={{ translateX: "-50%" }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
               className="relative dark:bg-black bg-white text-black dark:text-white p-5 rounded-md ">
 
                 <div className=' block'>
@@ -204,7 +235,7 @@ export default function Navbar() {
 
               </motion.div>
             )}
-          </div>
+          </div> */}
             
         
           <Link className='block' href="/contact" onClick={closeNavBar}>

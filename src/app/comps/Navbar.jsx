@@ -14,7 +14,7 @@ import { useState } from 'react'
 import { articles } from '../page'
 
 const dropCat = articles.map(drop => (
-  <h2 className='relative dark:text-white w-64 bg-white p-6 shadow-xl' key={drop.id}><Link href={`/blog/${drop.title.split(' ').join('-')}`} title={drop.title}>{drop.category}</Link>
+  <h2 className='relative dark:text-white w-64 dark:bg-gray-950 bg-white p-6 shadow-xl' key={drop.id}><Link href={`/blog/${drop.title.split(' ').join('-')}`} title={drop.title}>{drop.category}</Link>
   </h2>
 )).slice(2,8)
 

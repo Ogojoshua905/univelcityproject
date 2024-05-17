@@ -24,7 +24,7 @@ const [search, setSearch] = useState(' ');
         </div>
 
         <div className='flex justify-between'>
-            <h2 className=" text-3xl pl-9">Our Post</h2>  
+            <h2 className=" text-3xl pl-9">All Post</h2>  
             <div className=" end-0 right-0"><BlogCat /></div>
           </div>
     

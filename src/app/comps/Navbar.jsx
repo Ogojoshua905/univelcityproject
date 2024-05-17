@@ -14,7 +14,7 @@ import { useState } from 'react'
 import { articles } from '../page'
 
 const dropCat = articles.map(drop => (
-  <h2 className='relative dark:text-white w-64 dark:bg-gray-950 bg-white p-6 shadow-xl' key={drop.id}><Link href={`/blog/${drop.title.split(' ').join('-')}`} title={drop.title}>{drop.category}</Link>
+  <h2 className='relative dark:text-white w-64 dark:bg-gray-950 hover:text-[#9147FF] bg-white p-6 shadow-xl' key={drop.id}><Link href={`/blog/${drop.title.split(' ').join('-')}`} title={drop.title}>{drop.category}</Link>
   </h2>
 )).slice(2,8)
 
@@ -113,7 +113,7 @@ export default function Navbar() {
         
             <div className="relative w-fit h-fit" onMouseEnter={toggleCatDropdown} onMouseLeave={toggleCatDropdownUp}>
 
-            <span className='p-2 flex'>
+            <span className='p-2 flex hover:cursor-pointer'>
               Category <RiArrowDropDownLine className=' hover:animate-bounce' />
             </span>
             {showFlyout && (
@@ -168,7 +168,7 @@ export default function Navbar() {
       transition={{ duration: 0.3 }}
       className='md:hidden block px-2 pt-2 pb-3 bg-[#caacf7] space-y-1 sm:px-3'>
             
-            <Link href="/" className='p-2 hover:text-[#9147FF]'>
+            <Link href="/" className='p-2 hover:text-[#9147FF]' onClick={closeNavBar}>
               Home 
             </Link>
           

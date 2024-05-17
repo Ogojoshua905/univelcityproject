@@ -25,8 +25,8 @@ export default function Footer() {
     <h2 className=' text-4xl'>Pages</h2>
     
       <div className='block'>
-        <PageLinks href="" title="Home" link='/'/>
-        <PageLinks title="Author" link='/contact'/>
+        <PageLinks href="" title="Home" link='/home'/>
+        <PageLinks title="Contact" link='/contact'/>
         <PageLinks title="Blog" link='/category'/>
         <PageLinks title="About Us" link='/about'/>
         {/* <PageLinks title="Subscribe" link='/contact'/>

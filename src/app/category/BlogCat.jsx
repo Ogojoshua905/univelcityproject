@@ -1,5 +1,5 @@
 'use client'
-import { articles } from "../page"
+import { articles } from "../page";
 import Link from "next/link"
 import { useState } from "react";
 import { motion } from "framer-motion";

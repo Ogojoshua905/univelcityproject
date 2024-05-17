@@ -38,7 +38,7 @@ export default function BlogSection({ params }) {
                 
                 <div className='flex mx-12 justify-between border-b-2'>
                 <p className=" mt-[2px] text-2xl">{new Date(blogpost.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p> 
-            <button className="w-auto py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 hover:bg-indigo-700 focus:outline-none rounded-md focus:ring-2 focus:ring-offset-2">{blogpost.category}</button>
+           <Link href={`/category/${blogpost.category}`}><button className="w-auto py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 hover:bg-indigo-700 focus:outline-none rounded-md focus:ring-2 focus:ring-offset-2">{blogpost.category}</button></Link>
           </div>
                     
                    

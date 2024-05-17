@@ -49,10 +49,10 @@ export default function page() {
        className='justify-center text-center mt-7 text-7xl'>Focus on the Quest Objective!</motion.h1>
 
       <div className=' justify-center object-center items-center mt-6'>
-        <Image className='sm:w-full sm:h-auto md:w-[170vh] ml-9 md:h-[70vh] bg-cover md:pl-12 md:mx-auto py-12' src="/media/BR.jpg" alt='Gaming Equipment' width="400" height="200"/>
+        <Image className='sm:w-fit sm:h-auto md:w-[170vh] ml-9 md:h-[70vh] bg-cover md:pl-12 sm:mx-auto sm:my-auto md:mx-auto py-12' src="/media/BR.jpg" alt='Gaming Equipment' width="400" height="200"/>
       </div>
 
-      <div className='md:grid md:grid-cols-3 grid-rows-1 ml-12 gap-5 mr-12 mt-6 border-t-2 border-b-2 dark:border-white border-black mb-14'>
+      <div className='md:grid md:grid-cols-3 grid-rows-1 ml-12 gap-5 mr-12 mt-6 sm:border-2 md:border lg:border-t-2 border-b-2 dark:border-white border-black mb-14'>
         <div className='cols-span-1 mt-6'>
             <p className=' text-6xl justify-between sm:-scroll-mb-12 md:mr-12 font-medium'>Gather the squad <br /> and press <br /> on with <br /> report analysis!</p>
         </div>

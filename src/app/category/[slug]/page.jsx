@@ -1,6 +1,7 @@
 "use client"
 import { articles } from "@/app/page"
 import Link from "next/link"
+import Image from "next/image"
 
 
 export default function CategorySlug({params}) {
@@ -18,9 +19,9 @@ export default function CategorySlug({params}) {
       <div>
         <h1 className=" text-center text-5xl my-4">{params.slug}</h1>
 
-        {/* <div>
-          <Image className="sm:w-auto sm:h-auto md:w-[170vh] ml-9 md:h-[70vh] bg-cover md:pl-12 md:mx-auto py-12" src="@/public/media/Abstract.jpg" height="500" width="400" alt="Blog Page"/>
-        </div> */}
+        <div>
+          <Image className="sm:w-auto sm:h-auto md:w-[170vh] ml-9 md:h-[70vh] bg-cover md:pl-12 md:mx-auto py-12" src="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="500" width="400" alt="Blog Page"/>
+        </div>
       </div>
 
 

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react";
-import Button from "./comps/Button"
+import Button from "./comps/Button";
 import ShiftingCountdown from "./comps/ShiftingCountdown";
 
 // Note when Using the Arrays Your commas may cause some error
@@ -230,9 +230,12 @@ console.log(articles);
         const gridSquareVariants = {
           hidden: {opacity: 0}, show: {opacity: 1}
         }
-export default function Home() {
 
-
+        
+        export default function Home() {
+          
+          
+  const filteredArticle = articles.filter( article => article.title)
   const iPhone = articles.find(game => game.category == 'iPhone')
   const EJ = articles.find(game => game.author == 'Emily-Johnson')
   const Samsung = articles.find(game => game.category == 'Samsung')
@@ -315,7 +318,7 @@ export default function Home() {
 
             <div className=" col-span-1 row-span-1 col-start-2 pt-10 px-4 border-2  border-black dark:border-red-700 border-l-0  border-t-0" key={Samsung.id}>
             <Link href={`/category/${Samsung.category}`}>
-            <button type="submit" className="w-full mb-4 py-2 px-4 border border-transparent shadow-sm text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 bg-gradient-to-tr from-green-500 to-green-700 hover:from-green-600 hover:to-green-800">{Samsung.category}</button></Link>
+            <button type="submit" className="w-full mb-4 py-2 px-4 border border-transparent shadow-sm text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 bg-gradient-to-tr from-black to-white hover:from-white hover:to-blue-900">{Samsung.category}</button></Link>
               <Link href={`/category/${Samsung.category}`}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{Samsung.title}</p></Link>
               <p className=" text-xl pb-16">{Samsung.introduction}</p>
               <p className=" mt-[2px] text-2xl">{new Date(Samsung.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
@@ -371,7 +374,7 @@ export default function Home() {
     <p>Embark on thrilling adventures, compete in epic battles, and forge unforgettable memories as you navigate through a myriad of gaming landscapes</p>
   </div>
 
-  <div className="md:col-span-1 md:row-start-1 md:row-span-1 px-16 py-16 border-l-2 border-black">
+  <div className="md:col-span-1 md:row-start-1 md:row-span-1 px-16 py-16 border-l-2 dark:border-white border-black">
     <div className="border-b-2 border-black">
       <h1 className="text-3xl mb-10">Welcome</h1>
       <div className="rounded-full overflow-hidden w-36 h-36 border-white border-4 hover:border-purple-600">
@@ -390,6 +393,34 @@ export default function Home() {
   </div>
 </div>
 
+            <div className="flex my-28 mx-64 justify-between object-center items-center border p-12">
+              <span className=" text-4xl">Receive the latest in tech and gaming <br /> insights right in your inbox every month</span>
+              <div className=" flex border p-5">
+                <input className="mt-1 block sm:w-auto lg:w-full  focus:outline-none" type="text" />
+                <button className=" my-4 sm:mx-auto w-full sm:items-center py-2 mx-auto border border-transparent shadow-sm text-white bg-[#9147FF] hover:bg-[#af7aff] focus:outline-none rounded-md focus:ring-2 focus:ring-offset-2">Start Reading</button>
+              </div>
+            </div>
+
+            <div className='flex justify-between my-7'>
+            <h2 className=" text-3xl pl-9">All Post</h2>  
+          </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-5  mx-12">
+    {filteredArticle.map(article => (
+      <div key={article.id} className="border border-black leading-loose dark:border-white hover:duration-700 hover:ease-out hover:bg-gradient-to-tr from-red-500 via-pink-600 to-pink-400 rounded-md">
+        <Link href={`/blog/${article.title.split(' ').join('-')}`} title={article.title}>
+          <section className={`bg-cover h-52 my-4 border-black mx-8`} style={{backgroundImage: `url(/media/${article.category}.jpg)`}}>
+
+            <div className=" text-center">
+          <h2 className=" h-auto w-28 text-center rounded-md text-white bg-black hover:bg-violet-500  font-bold">{article.category}</h2>
+            </div>
+          </section>
+          <span className=" text-center items-center text-xl px-8">{article.title}</span>
+          <p className="  text-center px-6">{article.introduction}</p>
+        </Link>
+      </div>
+    ))}
+  </div> 
 
     </motion.div>
     </AnimatePresence>

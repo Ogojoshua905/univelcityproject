@@ -39,10 +39,10 @@ const [search, setSearch] = useState(' ');
           <section className={`bg-cover h-52 my-4 border-black mx-8`} style={{backgroundImage: `url(/media/${article.category}.jpg)`}}>
 
             <div className=" text-center">
-          <h2 className=" h-auto w-28 text-center rounded-md text-white bg-black hover:text-[#9147FF] hover:bg-violet-500  font-bold">{article.category}</h2>
+          <h2 className=" h-auto w-28 text-center rounded-md text-white bg-black hover:bg-violet-500  font-bold">{article.category}</h2>
             </div>
           </section>
-          <span className=" text-center text-xl  hover:text-[#9147FF] mx-8">{article.title}</span>
+          <span className=" text-center items-center text-xl px-8">{article.title}</span>
           <p className="  text-center px-6">{article.introduction}</p>
         </Link>
       </div>

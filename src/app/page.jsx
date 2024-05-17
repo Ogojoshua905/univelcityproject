@@ -396,7 +396,7 @@ console.log(articles);
             <div className="md:flex lg:flex sm:block sm:my-auto sm:mx-auto md:my-auto md:mx-auto lg:my-28 lg:mx-64 lg:justify-between object-center items-center border p-12">
               <span className=" text-4xl">Receive the latest in tech and gaming <br /> insights right in your inbox every month</span>
               <div className=" md:flex sm:block border p-5 my-4">
-                <input className="mt-1 sm:w-auto lg:w-full sm:border-b-2 sm:border-gray-700 focus:outline-none" type="text" />
+                <input className="mt-1 sm:w-auto lg:w-full sm:border-b-2 lg:border-none md:border-none sm:border-gray-700 focus:outline-none" type="text" />
                 <button className=" my-4 sm:mx-auto w-full sm:items-center py-2 mx-auto border border-transparent shadow-sm text-white bg-[#9147FF] hover:bg-[#af7aff] focus:outline-none rounded-md focus:ring-2 focus:ring-offset-2">Start Reading</button>
               </div>
             </div>

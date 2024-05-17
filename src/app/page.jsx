@@ -311,7 +311,7 @@ console.log(articles);
             <div className=" col-span-1 crow-span-1 col-start-1 pt-10 px-4 border-2  border-black border-l-0 dark:border-red-700  border-t-0" key={iPhone.id}>
             <Link href={`/category/${iPhone.category}`}>
             <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white rounded-lg bg-gradient-to-tr from-black to-blue-700 hover:from-blue-900 hover:to-black focus:outline-none focus:ring-2 focus:ring-offset-2">{iPhone.category}</button></Link>
-              <Link href={`/category/${Samsung.category}`}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{iPhone.title}</p></Link>
+              <Link href={`/blog/${iPhone.title.split(' ').join('-')}`} title={iPhone.title}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{iPhone.title}</p></Link>
               <p className=" text-xl pb-16">{iPhone.introduction}</p>
               <p className=" mt-[2px] text-2xl">{new Date(iPhone.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
             </div>
@@ -319,7 +319,7 @@ console.log(articles);
             <div className=" col-span-1 row-span-1 col-start-2 pt-10 px-4 border-2  border-black dark:border-red-700 border-l-0  border-t-0" key={Samsung.id}>
             <Link href={`/category/${Samsung.category}`}>
             <button type="submit" className="w-full mb-4 py-2 px-4 border border-transparent shadow-sm text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 bg-gradient-to-tr from-black to-white hover:from-white hover:to-blue-900">{Samsung.category}</button></Link>
-              <Link href={`/category/${Samsung.category}`}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{Samsung.title}</p></Link>
+              <Link href={`/blog/${Samsung.title.split(' ').join('-')}`} title={Samsung.title}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{Samsung.title}</p></Link>
               <p className=" text-xl pb-16">{Samsung.introduction}</p>
               <p className=" mt-[2px] text-2xl">{new Date(Samsung.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
             </div>
@@ -331,7 +331,7 @@ console.log(articles);
               <div className=" col-span-1 row-span-1 p-4 border-2 border-black border-l-0 dark:border-red-700 border-t-0" key={eSports.id}>
                  <Link href={`/category/${eSports.category}`}>
             <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 rounded-lg hover:bg-gradient-to-tr from-blue-600 to-white focus:outline-none focus:ring-2 focus:ring-offset-2">{eSports.category}</button></Link>
-              <Link href={`/category/${eSports.category}`}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{eSports.title}</p></Link>
+              <Link href={`/blog/${eSports.title.split(' ').join('-')}`} title={eSports.title}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{eSports.title}</p></Link>
               <p className=" text-xl pb-16">{eSports.introduction}</p>
               <p className=" mt-[2px] text-2xl">{new Date(eSports.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
               </div>
@@ -341,7 +341,7 @@ console.log(articles);
              <div className = "col-span-1 row-span-1 pt-10 px-4 border-2  border-black dark:border-red-800 border-l-0  border-t-0" key={BRG.id}>
                <Link href={`/category/${BRG.category}`}>
             <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 rounded-lg hover:bg-gradient-to-tr from-blue-600 to-white focus:outline-none focus:ring-2 focus:ring-offset-2">{BRG.category}</button></Link>
-              <Link href={`/category/${BRG.category}`}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{BRG.title}</p></Link>
+              <Link href={`/blog/${BRG.title.split(' ').join('-')}`} title={BRG.title}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{BRG.title}</p></Link>
               <p className=" text-xl pb-16">{BRG.introduction}</p>
               <p className=" mt-[2px] text-2xl">{new Date(BRG.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
            </div>
@@ -393,10 +393,10 @@ console.log(articles);
   </div>
 </div>
 
-            <div className="flex my-28 mx-64 justify-between object-center items-center border p-12">
+            <div className="md:flex lg:flex sm:block my-28 mx-64 lg:justify-between object-center items-center border p-12">
               <span className=" text-4xl">Receive the latest in tech and gaming <br /> insights right in your inbox every month</span>
               <div className=" flex border p-5">
-                <input className="mt-1 block sm:w-auto lg:w-full  focus:outline-none" type="text" />
+                <input className="mt-1 sm:w-auto lg:w-full  focus:outline-none" type="text" />
                 <button className=" my-4 sm:mx-auto w-full sm:items-center py-2 mx-auto border border-transparent shadow-sm text-white bg-[#9147FF] hover:bg-[#af7aff] focus:outline-none rounded-md focus:ring-2 focus:ring-offset-2">Start Reading</button>
               </div>
             </div>

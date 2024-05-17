@@ -1,7 +1,9 @@
+"use client"
 import Image from 'next/image'
 import SocialIcons  from './SocialIcons'
 import PageLinks from './PageLinks'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { BiSolidJoystick } from 'react-icons/bi'
 
 export default function Footer() {
@@ -12,7 +14,18 @@ export default function Footer() {
     
     <div className=" flex-col md:gap-y-6">
     
-    <Link href="/" className='text-3xl hover:cursor-pointer mt-5 md:flex gap-x-3'><BiSolidJoystick className=' mb-5 items-center ml-2 leading-6' />TechGamer Nexus</Link>
+    <Link className="" href="/">
+      <div className='flex'>
+    <BiSolidJoystick className='text-4xl' />
+      <span className='md:flex hidden'>TechGamer Nexus</span>
+      <motion.span
+       initial={{opacity: 0, x:10 }}
+       animate={{ opacity: 1, x:0 }}
+       exit={{ opacity: 0, x:10 }}
+       transition={{ duration: 0.3 }}
+       className=' md:hidden flex cursor-pointer'>TGN</motion.span>
+      </div>
+      </Link>
         <p className='font-bold mb-5'>Where Tech Meets Play</p>
         <SocialIcons />
     </div>

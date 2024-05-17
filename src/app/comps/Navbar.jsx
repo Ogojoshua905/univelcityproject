@@ -59,7 +59,6 @@ export default function Navbar() {
     
     
     <div className='justify-between items-center gap-x-3 flex'>
-      {/* <Image src="/LOGO.png" alt="Gn" width="50" height="30" className='rounded-md shadow-lg ml-5'/> */}
  
       <Link className="" href="/">
       <div className='flex'>
@@ -88,7 +87,7 @@ export default function Navbar() {
 
     <div className='md:block hidden'>
       
-    <div className='dark:border-white flex items-center space-x-4'>
+    <div className='dark:border-white flex items-center space-x-9'>
 
             <Link className='p-2' href="/">
               Home

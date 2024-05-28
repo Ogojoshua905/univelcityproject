@@ -3,6 +3,7 @@ import Navbar from "./comps/Navbar";
 import Footer from "./comps/Footer";
 import "./globals.css";
 import Provider from "./comps/Provider";
+import Transition from "./comps/Transition";
 
 const Viju = Acme({ 
   subsets: ["latin"], 
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
 
       <body className={Viju.className}>
         <Provider>
-
+      <Transition />
       <Navbar />
       
 

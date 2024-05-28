@@ -15,7 +15,7 @@ export default function BlogSection({ params }) {
     )) : [];
 
     return (
-        <div className=" pl-10">
+        <div className=" lg:pl-10 sm:px-5">
 
             {blogpost && (
                 
@@ -26,9 +26,9 @@ export default function BlogSection({ params }) {
                 animate={{opacity:1, x:0}}
                 exit={{opacity: 0, x:10 }}
                 transition={{duration: 1}}
-                className="text-6xl py-12 text-center">{blogpost.title}</motion.h2>
+                className="lg:text-6xl text-4xl py-12 text-center">{blogpost.title}</motion.h2>
 
-                <Image className="sm:w-full sm:h-auto md:w-[170vh] ml-9 md:h-[70vh] bg-cover md:px-12 md:mx-auto py-9" src={`/media/${blogpost.category}.jpg`} alt={blogpost.title} width="500" height="500" />
+                <Image className="sm:w-auto object-center sm:h-auto md:w-[170vh] sm:ml-0 md:ml-0 lg:ml-9 md:h-[70vh] sm:bg-contain lg:bg-cover md:px-12 md:mx-auto py-9" src={`/media/${blogpost.category}.jpg`} alt={blogpost.title} width="500" height="500" />
             
                 </div>
 
@@ -36,14 +36,14 @@ export default function BlogSection({ params }) {
             {blogpost && (
                 <div>
                 
-                <div className='flex mx-12 justify-between border-b-2'>
+                <div className='flex lg:mx-12 justify-normal lg:justify-between border-b-2'>
                 <p className=" mt-[2px] text-2xl">{new Date(blogpost.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p> 
            <Link href={`/category/${blogpost.category}`}><button className="w-auto py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 hover:bg-indigo-700 focus:outline-none rounded-md focus:ring-2 focus:ring-offset-2">{blogpost.category}</button></Link>
           </div>
                     
                    
                     {blogpost.description.map((para, index) => (
-                        <p className="items-center py-10 text-center leading-relaxed px-12" key={index}>{para}</p>
+                        <p className="items-center py-10 text-center leading-relaxed tracking-normal lg:px-12" key={index}>{para}</p>
                         
                     ))}
                 </div>

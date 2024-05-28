@@ -34,15 +34,6 @@ export default function Navbar() {
     setisClick(false);
   };
 
-  // const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
-
-  // const [isCatDropdownOpen, setIsCatDropdownOpen] = useState(false);
-
-
-  // const toggleHomeDropdown = () => {
-  //   setIsHomeDropdownOpen(!isHomeDropdownOpen);
-  // };
-
   const toggleCatDropdown = () => {
     setOpen(true);
   };
@@ -60,7 +51,7 @@ export default function Navbar() {
     
     <div className='justify-between items-center gap-x-3 flex'>
  
-      <Link className="" href="/">
+      <Link href="/">
       <div className='flex'>
     <BiSolidJoystick className='text-4xl' />
       <span className='md:flex hidden'>TechGamer Nexus</span>

@@ -281,7 +281,7 @@ console.log(articles);
 
 
             <div>
-            <Link href="/">{MG.title}</Link>
+            <Link href={`/blog/${MG.title.split(' ').join('-')}`}>{MG.title}</Link>
             </div>
           </motion.h2>
           <motion.p initial={{

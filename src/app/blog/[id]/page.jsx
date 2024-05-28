@@ -28,7 +28,7 @@ export default function BlogSection({ params }) {
                 transition={{duration: 1}}
                 className="lg:text-6xl text-4xl py-12 text-center">{blogpost.title}</motion.h2>
 
-                <Image className="sm:w-auto object-center sm:h-auto md:w-[170vh] sm:ml-0 md:ml-0 lg:ml-9 md:h-[70vh] sm:bg-contain lg:bg-cover md:px-12 md:mx-auto py-9" src={`/media/${blogpost.category}.jpg`} alt={blogpost.title} width="500" height="500" />
+                <Image className="sm:w-auto object-center sm:h-auto md:w-[170vh] rounded-lg md:h-[70vh] sm:bg-contain lg:bg-cover md:px-12 md:mx-auto py-9" src={`/media/${blogpost.category}.jpg`} alt={blogpost.title} width="500" height="500" />
             
                 </div>
 

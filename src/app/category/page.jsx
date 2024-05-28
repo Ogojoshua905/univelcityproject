@@ -20,7 +20,7 @@ const [search, setSearch] = useState(' ');
       <h1 className=" text-center pt-8 text-6xl">Uncover Engaging Adventures</h1>
 
         <div>
-          <Image className="sm:w-auto sm:h-auto md:w-[170vh] ml-9 md:h-[70vh] bg-cover md:pl-12 md:mx-auto py-12" src="/media/Abstract.jpg" height="500" width="400" alt="Blog Page"/>
+          <Image className="sm:w-auto object-center sm:h-auto md:w-[170vh] sm:ml-0 md:ml-0 lg:ml-9 md:h-[70vh] sm:bg-contain lg:bg-cover bg-cover md:pl-12 md:mx-auto py-12" src="/media/Abstract.jpg" height="500" width="400" alt="Blog Page"/>
         </div>
 
         <div className='flex justify-between'>

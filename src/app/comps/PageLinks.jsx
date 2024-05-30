@@ -8,7 +8,7 @@ export default function PageLinks({title,link}) {
     whileTap={{ scale: 1.1 }}
     // drag="x"
     // dragConstraints={{ left: -100, right: 100 }}
-     className=" hover:text-[#d45f5f]">
+     className=" text-[#03A9F4] hover:text-[#0277BD]">
       <Link href={link}>
       {title}
       </Link>

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { articles } from "@/app/page";
 
 export default function AuthorSection({params}) {
-    const authPost = articles.find(auth => auth.title.split(' ').join('-') === params.id);
+    const authPost = articles.find(auth => auth.author.split(' ').join('-') === params.id);
 
     // Check if blogpost exists before filtering relatedBlog
     const fromAuth = authPost ? articles.filter(authors => (
@@ -40,7 +40,7 @@ export default function AuthorSection({params}) {
                     <h2 className="text-3xl py-6 uppercase">Blogs By Author:</h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-5  mx-12">
                         {fromAuth.map(authors => (
-                            <Link className="border border-black leading-loose py-11 dark:border-white hover:duration-700 hover:ease-out hover:bg-gradient-to-tr from-red-500 via-pink-600 to-pink-400 rounded-md" key={authors.id} href={`/blog/${authors.title.split(' ').join('-')}`} title={authors.title}>
+                            <Link className="border border-black leading-loose py-11 dark:border-white hover:duration-700 hover:ease-out hover:bg-purple-500 rounded-md" key={authors.id} href={`/blog/${authors.title.split(' ').join('-')}`} title={authors.title}>
                                 <section className={`bg-cover h-52 my-4 border-black mx-8`} style={{ backgroundImage: `url(/media/${authors.category}.jpg)` }}>
                                 
                                 {/* Content */}

@@ -38,7 +38,7 @@ export default function BlogSection({ params }) {
                 
                 <div className='flex lg:mx-12 justify-normal lg:justify-between border-b-2'>
                 <p className=" mt-[2px] text-2xl">{new Date(blogpost.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p> 
-           <Link href={`/category/${blogpost.category}`}><button className="w-auto py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 hover:bg-indigo-700 focus:outline-none rounded-md focus:ring-2 focus:ring-offset-2">{blogpost.category}</button></Link>
+           <Link href={`/category/${blogpost.category}`}><button className="w-auto py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-purple-500 hover:bg-indigo-700 focus:outline-none rounded-md focus:ring-2 focus:ring-offset-2">{blogpost.category}</button></Link>
           </div>
                     
                    
@@ -53,7 +53,7 @@ export default function BlogSection({ params }) {
                     <h2 className="text-3xl py-6 uppercase">related content:</h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-5  mx-12">
                         {relatedBlog.map(article => (
-                            <Link className="border border-black leading-loose py-11 dark:border-white hover:duration-700 hover:ease-out hover:bg-gradient-to-tr from-red-500 via-pink-600 to-pink-400 rounded-md" key={article.id} href={`/blog/${article.title.split(' ').join('-')}`} title={article.title}>
+                            <Link className="border border-black leading-loose py-11 dark:border-white hover:duration-700 hover:ease-out hover:bg-purple-500 rounded-md" key={article.id} href={`/blog/${article.title.split(' ').join('-')}`} title={article.title}>
                                 <section className={`bg-cover h-52 my-4 border-black mx-8`} style={{ backgroundImage: `url(/media/${article.category}.jpg)` }}>
                                 
                                 

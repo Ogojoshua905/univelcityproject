@@ -18,7 +18,7 @@ export default function NotFoundHomePage() {
       <p className="text-xl text-gray-600 mb-6">Seems like you've taken a detour from our main hub.</p>
       <p className="text-xl text-gray-600 mb-8">Let's guide you back:</p>
       <Link href="/">
-        <span className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">
+        <span className="bg-[#af1e7] hover:bg-purple-500 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">
           Back to Home
         </span>
       </Link>

@@ -240,6 +240,7 @@ console.log(articles);
   const EJ = articles.find(game => game.author == 'Emily-Johnson')
   const Samsung = articles.find(game => game.category == 'Samsung')
   const MG = articles.find(game => game.category == 'Mobile-Gaming')
+  const EC = articles.find(game => game.category == 'E-Commerce')
   const eSports = articles.find(game => game.category == 'eSports')
   const BRG = articles.find(game => game.category == 'Battle-Royale-Games')
 
@@ -255,7 +256,7 @@ console.log(articles);
         animate="show"
         className="grid lg:grid-cols-3 gap-5 mt-8 text-white rounded-2xl">
 
-        <motion.div variants={gridSquareVariants} className="border border-black bg-gradient-to-tl from-purple-400 to-purple-900">
+        <motion.div variants={gridSquareVariants} className="border border-black bg-[#162739]">
 
         <div
          
@@ -265,7 +266,7 @@ console.log(articles);
            initial={{ opacity: 0, x:100}} 
           animate={{ opacity: 1, x:0 }}
           transition={{duration: 1, ease: "easeOut", delay: 0.2 }} className=" pr-4">
-            Agency
+            {MG.category}
           </motion.h2>
 
           <motion.li
@@ -285,40 +286,40 @@ console.log(articles);
             </div>
           </motion.h2>
           <motion.p initial={{
-            opacity: 0, y:-100}} animate={{ opacity:1, y:0}} transition={{duration: 0.4, ease: "easeOut"}}><q>Embark on thrilling adventures, compete in epic battles, and forge unforgettable memories as you navigate through a myriad of gaming landscapes</q></motion.p>
+            opacity: 0, y:-100}} animate={{ opacity:1, y:0}} transition={{duration: 0.4, ease: "easeOut"}}><q className=" leading-loose">{MG.description}</q></motion.p>
         </motion.div>
 
         <motion.div variants={gridSquareVariants}
          >
-          <Image className=" border-black object-contain hover:scale-95 transition ease-in-out duration-500" src='https://images.pexels.com/photos/9072385/pexels-photo-9072385.jpeg?auto=compress&cs=tinysrgb&w=400' alt="Gamer" width='500' height='100'/>
+          <Image className=" border-black object-contain hover:scale-95 lg:w-full lg:h-full transition ease-in-out duration-500" src='https://images.pexels.com/photos/9072385/pexels-photo-9072385.jpeg?auto=compress&cs=tinysrgb&w=400' alt="Gamer" width='500' height='100'/>
         </motion.div>
 
         <motion.div
-         variants={gridSquareVariants} className="  border bg-gradient-to-br from-red-500 via-indigo-500 to-blue-500  text-white">
-          <div className=" leading-8 ml-8 mb-8">
+         variants={gridSquareVariants} className="  border bg-purple-600">
+          <div className=" leading-[40px] tracking-wider ml-8 mb-8">
 
             <p>
 <q>
- Step into the virtual realm, where every click unlocks captivating narratives and thought-provoking challenges. Welcome to a world where imagination meets skill, and every game is an adventure waiting to be explored. Embrace the thrill,  ignite your passion, and embark on a gaming odyssey that knows no bounds.
+{EC.description}
 </q>
 </p>
-            <Button status="Start Reading"></Button>
+            <button type="submit" className="py-2 mb-4 px-4 border border-transparent shadow-sm text-black bg-[#ffff] rounded-lg hover:bg-[#162739] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2">Start Reading</button>
           </div>
         </motion.div>
       </motion.div>
 
-      <div className="md:grid md:grid-col-4 grid-rows-[repeat(5)] mt-10 leading-loose max-w-max ml-6 border-t-2 dark:border-red-700 border-black">
-            <div className=" col-span-1 crow-span-1 col-start-1 pt-10 px-4 border-2  border-black border-l-0 dark:border-red-700  border-t-0" key={iPhone.id}>
+      <div className="md:grid md:grid-col-4 grid-rows-[repeat(5)] mt-10 leading-loose max-w-max ml-6 border-t-2 dark:border-white border-black">
+            <div className=" col-span-1 crow-span-1 col-start-1 pt-10 px-4 border-2  border-black border-l-0 dark:border-white  border-t-0" key={iPhone.id}>
             <Link href={`/category/${iPhone.category}`}>
-            <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white rounded-lg bg-gradient-to-tr from-black to-blue-700 hover:from-blue-900 hover:to-black focus:outline-none focus:ring-2 focus:ring-offset-2">{iPhone.category}</button></Link>
+            <button type="submit" className="py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-[#9147FF] rounded-lg hover:bg-[#af7aff] focus:outline-none focus:ring-2 focus:ring-offset-2">{iPhone.category}</button></Link>
               <Link href={`/blog/${iPhone.title.split(' ').join('-')}`} title={iPhone.title}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{iPhone.title}</p></Link>
               <p className=" text-xl pb-16">{iPhone.introduction}</p>
               <p className=" mt-[2px] text-2xl">{new Date(iPhone.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
             </div>
 
-            <div className=" col-span-1 row-span-1 col-start-2 pt-10 px-4 border-2  border-black dark:border-red-700 border-l-0  border-t-0" key={Samsung.id}>
+            <div className=" col-span-1 row-span-1 col-start-2 pt-10 px-4 border-2  border-black dark:border-white border-l-0  border-t-0" key={Samsung.id}>
             <Link href={`/category/${Samsung.category}`}>
-            <button type="submit" className="w-full mb-4 py-2 px-4 border border-transparent shadow-sm text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 bg-gradient-to-tr from-black to-white hover:from-white hover:to-blue-900">{Samsung.category}</button></Link>
+            <button type="submit" className="py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-[#9147FF] rounded-lg hover:bg-[#af7aff] focus:outline-none focus:ring-2 focus:ring-offset-2">{Samsung.category}</button></Link>
               <Link href={`/blog/${Samsung.title.split(' ').join('-')}`} title={Samsung.title}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{Samsung.title}</p></Link>
               <p className=" text-xl pb-16">{Samsung.introduction}</p>
               <p className=" mt-[2px] text-2xl">{new Date(Samsung.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
@@ -328,9 +329,9 @@ console.log(articles);
               <Image src="/media/Talking.jpg" className="h-[700px] border-b-2 border-black" width="500" height="500"/>
             </div>
             {
-              <div className=" col-span-1 row-span-1 p-4 border-2 border-black border-l-0 dark:border-red-700 border-t-0" key={eSports.id}>
+              <div className=" col-span-1 row-span-1 p-4 border-2 border-black border-l-0 dark:border-white border-t-0" key={eSports.id}>
                  <Link href={`/category/${eSports.category}`}>
-            <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 rounded-lg hover:bg-gradient-to-tr from-blue-600 to-white focus:outline-none focus:ring-2 focus:ring-offset-2">{eSports.category}</button></Link>
+            <button type="submit" className="py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-[#9147FF] rounded-lg hover:bg-[#af7aff] focus:outline-none focus:ring-2 focus:ring-offset-2">{eSports.category}</button></Link>
               <Link href={`/blog/${eSports.title.split(' ').join('-')}`} title={eSports.title}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{eSports.title}</p></Link>
               <p className=" text-xl pb-16">{eSports.introduction}</p>
               <p className=" mt-[2px] text-2xl">{new Date(eSports.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
@@ -338,9 +339,9 @@ console.log(articles);
             }
 
             {
-             <div className = "col-span-1 row-span-1 pt-10 px-4 border-2  border-black dark:border-red-800 border-l-0  border-t-0" key={BRG.id}>
+             <div className = "col-span-1 row-span-1 pt-10 px-4 border-2  border-black dark:border-white border-l-0  border-t-0" key={BRG.id}>
                <Link href={`/category/${BRG.category}`}>
-            <button type="submit" className="w-full py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 rounded-lg hover:bg-gradient-to-tr from-blue-600 to-white focus:outline-none focus:ring-2 focus:ring-offset-2">{BRG.category}</button></Link>
+            <button type="submit" className="py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-[#9147FF] rounded-lg hover:bg-[#af7aff] focus:outline-none focus:ring-2 focus:ring-offset-2">{BRG.category}</button></Link>
               <Link href={`/blog/${BRG.title.split(' ').join('-')}`} title={BRG.title}><p className="text-3xl font-bold hover:text-purple-500 hover:transition-all hover:cursor-pointer">{BRG.title}</p></Link>
               <p className=" text-xl pb-16">{BRG.introduction}</p>
               <p className=" mt-[2px] text-2xl">{new Date(BRG.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
@@ -364,18 +365,46 @@ console.log(articles);
     </div>
     
     <div className="flex space-x-2">
-      <Link href="/">
-        <button type="submit" className="py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-blue-600 rounded-lg hover:bg-gradient-to-tr from-blue-600 to-white focus:outline-none focus:ring-2 focus:ring-offset-2">{Samsung.category}</button>
+      <Link href={`/category/${MG.category}`}>
+        <button type="submit" className="py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-[#9147FF] rounded-lg hover:bg-[#af7aff] focus:outline-none focus:ring-2 focus:ring-offset-2">{MG.category}</button>
       </Link>
-      <p className="mt-[2px] text-2xl">{new Date(eSports.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
+      <p className="mt-[2px] text-2xl">{new Date(MG.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
     </div>
 
     <h1 className="text-xl">Unleash Your Creativity, Your Potential</h1>
     <p>Embark on thrilling adventures, compete in epic battles, and forge unforgettable memories as you navigate through a myriad of gaming landscapes</p>
+
+    <div className="mb-6">
+      <Image className="w-full h-full" src={`/media/${eSports.category}.jpg`} height="500" width='500' alt="don't care" />
+    </div>
+    
+    <div className="flex space-x-2">
+      <Link href={`/category/${eSports.category}`}>
+        <button type="submit" className="py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-[#9147FF] rounded-lg hover:bg-[#af7aff] focus:outline-none focus:ring-2 focus:ring-offset-2">{eSports.category}</button>
+      </Link>
+      <p className="mt-[2px] text-2xl">{new Date(eSports.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
+    </div>
+
+    <h1 className="text-xl">{eSports.title}</h1>
+    <p>{eSports.introduction}</p>
+
+    <div className="mb-6">
+      <Image className="w-full h-full" src={`/media/${iPhone.category}.jpg`} height="500" width='500' alt="don't care" />
+    </div>
+    
+    <div className="flex space-x-2">
+      <Link href={`/category/${iPhone.category}`}>
+        <button type="submit" className="py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-[#9147FF] rounded-lg hover:bg-[#af7aff] focus:outline-none focus:ring-2 focus:ring-offset-2">{iPhone.category}</button>
+      </Link>
+      <p className="mt-[2px] text-2xl">{new Date(iPhone.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</p>
+    </div>
+
+    <h1 className="text-xl">{iPhone.title}</h1>
+    <p>{iPhone.introduction}</p>
   </div>
 
   <div className="md:col-span-1 md:row-start-1 md:row-span-1 px-16 py-16 border-l-2 dark:border-white border-black">
-    <div className="border-b-2 border-black">
+    <div className="border-b-2 border-black dark:border-white w-fit">
       <h1 className="text-3xl mb-10">Welcome</h1>
       <div className="rounded-full overflow-hidden w-36 h-36 border-white border-4 hover:border-purple-600">
         <Image className="w-full h-full object-cover" src="/media/Emily-Johnson.jpg" height="500" width="500" alt="Emily" />
@@ -387,8 +416,20 @@ console.log(articles);
     </div>
 
     {/* Categories Checkbox */}
-    <div>
-   <h1 className="text-3xl mb-10">Categories</h1>
+    <div className=" py-5">
+   <h1 className="text-3xl">Categories</h1>
+   <div className=" block">
+            {
+              filteredArticle.map( article => (
+                <div className=" flex space-y-1 leading-normal gap-x-2" key={article.id}>
+                   <Link href={`/category/${article.category}`}>
+                  <input type="radio" id={article.category} name="myRadio" className=" appearance-none w-5 h-5 rounded-full border border-gray-300 bg-white hover:focus-within:bg-gray-800 hover:cursor-pointer checked:bg-blue-600" />
+                  <label htmlFor={article.category} className=" ml-2 font-bold text-[20px] text-gray-700 hover:cursor-pointer hover:text-[#af7aff]">{article.category}</label>
+                   </Link> 
+                </div>
+              ))
+            }
+   </div>
     </div>
   </div>
 </div>
@@ -407,12 +448,12 @@ console.log(articles);
 
     <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-5  mx-12">
     {filteredArticle.map(article => (
-      <div key={article.id} className="border border-black leading-loose dark:border-white hover:duration-700 hover:ease-out hover:bg-gradient-to-tr from-red-500 via-pink-600 to-pink-400 rounded-md">
+      <div key={article.id} className="border border-black leading-loose dark:border-white hover:duration-700 hover:ease-out hover:bg-purple-500 rounded-md">
         <Link href={`/blog/${article.title.split(' ').join('-')}`} title={article.title}>
           <section className={`bg-cover h-52 my-4 border-black mx-8`} style={{backgroundImage: `url(/media/${article.category}.jpg)`}}>
 
             <div className=" text-center">
-          <h2 className=" h-auto w-28 text-center rounded-md text-white bg-black hover:bg-violet-500  font-bold">{article.category}</h2>
+          <h2 className=" h-auto w-28 text-center rounded-md text-white bg-black hover:bg-purple-500  font-bold">{article.category}</h2>
             </div>
           </section>
           <span className=" text-center items-center text-xl px-8">{article.title}</span>

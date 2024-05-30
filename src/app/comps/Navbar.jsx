@@ -45,7 +45,7 @@ export default function Navbar() {
   return (
     <AnimatePresence>
 
-    <nav className='border-gray-950 dark:border-red-500 border-y-4 sm:block md:flex justify-between items-center text-2xl capitalize font-bold mt-20'>
+    <nav className='border-gray-950 dark:border-white border-y-2 sm:block md:flex justify-between items-center text-2xl capitalize font-bold mt-20'>
 
     
     

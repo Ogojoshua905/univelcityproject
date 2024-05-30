@@ -34,12 +34,12 @@ const [search, setSearch] = useState(' ');
 
     <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-5  mx-12">
     {filteredArticle.map(article => (
-      <div key={article.id} className="border border-black leading-loose dark:border-white hover:duration-700 hover:ease-out hover:bg-gradient-to-tr from-red-500 via-pink-600 to-pink-400 rounded-md">
+      <div key={article.id} className="border border-black leading-loose dark:border-white hover:duration-700 hover:ease-out hover:bg-purple-500 rounded-md">
         <Link href={`/blog/${article.title.split(' ').join('-')}`} title={article.title}>
           <section className={`bg-cover h-52 my-4 border-black mx-8`} style={{backgroundImage: `url(/media/${article.category}.jpg)`}}>
 
             <div className=" text-center">
-          <h2 className=" h-auto w-28 text-center rounded-md text-white bg-black hover:bg-violet-500  font-bold">{article.category}</h2>
+          <h2 className=" h-auto w-28 text-center rounded-md text-white bg-black hover:bg-purple-500  font-bold">{article.category}</h2>
             </div>
           </section>
           <span className=" text-center items-center text-xl px-8">{article.title}</span>

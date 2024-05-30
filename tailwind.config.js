@@ -34,6 +34,9 @@ module.exports = {
             "warning-content": "rgb(71, 71, 0)",
             "error-content": "rgb(255, 255, 255)"
         },
+        backgroundImage: {
+          light: 'url("/bg-light.jpg")',
+        },
     }
 },
   plugins: [],

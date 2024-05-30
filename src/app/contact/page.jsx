@@ -58,7 +58,7 @@ export default function page() {
                 <div className="mb-4 lg:block sm:flex text-4xl">
 
                   <Link className="flex mb-10" href="mailto:joshuaexcellency@gmail.com.com">
-                    <FaEnvelope className="hover:text-white p-2 rounded-full border"/><span className=" font-medium hover:text-pink-500">Email</span>
+                    <FaEnvelope className="hover:text-white p-2 rounded-full border"/><span className=" font-medium hover:bg-purple-500">Email</span>
                     </Link>
                   
 

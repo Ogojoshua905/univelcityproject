@@ -8,19 +8,12 @@ export default function CategorySlug({params}) {
     const filteredCat = articles.filter(article => article.category ==
          params.slug) 
   return (
-    // <div className="grid md:grid-cols-3 gap-4 mb-7 object-cover pl-4 pr-4">
-    //   {filteredCat.map( article => (
-    //     <section className={`bg-[url(/media/${article.category}.jpg)bg-cover h-[300px]]`}>
-    //         <h2>{article.title}</h2>
-    //     </section>
-    //   ))}
-    // </div>
     <div>
       <div>
         <h1 className=" text-center text-5xl my-4">{params.slug}</h1>
 
         <div>
-          <Image className="sm:w-auto sm:h-auto md:w-[170vh] ml-9 md:h-[70vh] bg-cover md:pl-12 md:mx-auto py-12" src="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="500" width="400" alt="Blog Page"/>
+          <Image className="sm:w-auto object-center sm:h-auto md:w-[170vh] sm:ml-0 lg:ml-9 md:ml-0 md:h-[70vh] lg:bg-cover md:pl-12 md:mx-auto py-12" src="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="500" width="400" alt="Blog"/>
         </div>
       </div>
 

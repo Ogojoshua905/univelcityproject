@@ -52,9 +52,9 @@ export default function page() {
         <Image className='sm:w-fit sm:h-auto md:w-[170vh] ml-9 md:h-[70vh] bg-cover md:pl-12 sm:mx-auto sm:my-auto md:mx-auto py-12' src="/media/BR.jpg" alt='Gaming Equipment' width="400" height="200"/>
       </div>
 
-      <div className='md:grid md:grid-cols-3 grid-rows-1 ml-12 gap-5 mr-12 mt-6 sm:border-2 md:border lg:border-t-2 border-b-2 dark:border-white border-black mb-14'>
-        <div className='cols-span-1 mt-6'>
-            <p className=' text-6xl justify-between sm:-scroll-mb-12 md:mr-12 font-medium'>Gather the squad <br /> and press <br /> on with <br /> report analysis!</p>
+      <div className='md:grid md:grid-cols-3 grid-rows-1 ml-12 gap-5 mr-12 mt-6 sm:border-2 border-l-0 p-5 md:border lg:border-t-2 border-b-2 dark:border-white border-black mb-14'>
+        <div className='cols-span-1 border-l-0 mt-6'>
+            <p className=' text-6xl justify-between md:mr-12 font-medium'>Gather the squad <br /> and press <br /> on with <br /> report analysis!</p>
         </div>
 
         <div className=' col-span-2 border-l-2 border-black dark:border-white '>
@@ -105,8 +105,8 @@ export default function page() {
           </div>
 
           {blogAuth.map( auth => (
-      <div key={auth.id} className="border border-black leading-loose dark:border-white hover:duration-700 hover:ease-out hover:bg-gradient-to-tr from-red-500 via-pink-600 to-pink-400 rounded-md">
-        <Link href={`/blogauthor/${auth.title.split(' ').join('-')}`} title={auth.title}>
+      <div key={auth.id} className="border border-black leading-loose dark:border-white hover:duration-700 hover:ease-out hover:bg-purple-500 rounded-md">
+        <Link href={`/blogauthor/${auth.author.split(' ').join('-')}`} title={auth.author}>
           <section className={` bg-cover bg-no-repeat h-52 my-4 border-black mx-8`} style={{backgroundImage: `url(/media/${auth.author}.jpg)`}}>
 
           </section>

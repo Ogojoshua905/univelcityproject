@@ -8,7 +8,7 @@ import { BiSolidJoystick } from 'react-icons/bi'
 
 export default function Footer() {
   return (
-   <footer className='lg:h-[100vh] sm:h-auto bg-[#F7F7F7] text-[#333333] mt-14 leading-6 gap-8'>
+   <footer className='lg:h-[100vh] sm:h-auto bg-[#162739]  mt-14 leading-6 gap-8'>
     <div className=' lg:flex sm:block gap-x-16 px-12'>
 
     
@@ -26,14 +26,14 @@ export default function Footer() {
        className=' md:hidden flex cursor-pointer'>TGN</motion.span>
       </div>
       </Link>
-        <p className='font-bold mb-5'>Where Tech Meets Play</p>
+        <p className='font-bold mb-5'>Where  Tech Meets Play</p>
         <SocialIcons />
     </div>
     
     
     <div className=' items-center object-center'>
         <div className='md:flex mt-5  justify-start items-start gap-48 text-2xl'>
-
+ 
   <div className='capitalize sm:block md:block items-center object-center leading-loose mb-5'>
     <h2 className=' text-4xl'>Pages</h2>
     

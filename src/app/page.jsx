@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useEffect, useRef, useState } from "react";
 import Button from "./comps/Button";
 import ShiftingCountdown from "./comps/ShiftingCountdown";
+import {FaGithub, FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp, } from 'react-icons/fa'
 
 // Note when Using the Arrays Your commas may cause some error
 
@@ -273,7 +274,7 @@ console.log(articles);
              initial={{ opacity: 0, x:-100}} 
              animate={{ opacity: 1, x:0 }}
              transition={{duration: 1, ease: "easeOut", delay: 0.2 }}
-          >February 7 2013</motion.li>
+          >{new Date(MG.date).toLocaleDateString('en',{weekday: "long", year: 'numeric',month:'long', day  :'numeric'})}</motion.li>
         </div>
 
           <motion.h2 initial={{ opacity: 0, y:100}} 
@@ -282,11 +283,11 @@ console.log(articles);
 
 
             <div>
-            <Link href={`/blog/${MG.title.split(' ').join('-')}`}>{MG.title}</Link>
+            <Link href={`/blog/${MG.title.split(' ').join('-')}`} className=" text-3xl text-center mx-5">{MG.title}</Link>
             </div>
           </motion.h2>
           <motion.p initial={{
-            opacity: 0, y:-100}} animate={{ opacity:1, y:0}} transition={{duration: 0.4, ease: "easeOut"}}><q className=" leading-loose">{MG.description}</q></motion.p>
+            opacity: 0, y:-100}} animate={{ opacity:1, y:0}} transition={{duration: 0.4, ease: "easeOut"}}><q className="text-lg text-center leading-[40px] tracking-wider ml-8 mb-8">{MG.description}</q></motion.p>
         </motion.div>
 
         <motion.div variants={gridSquareVariants}
@@ -303,7 +304,8 @@ console.log(articles);
 {EC.description}
 </q>
 </p>
-            <button type="submit" className="py-2 mb-4 px-4 border border-transparent shadow-sm text-black bg-[#ffff] rounded-lg hover:bg-[#162739] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2">Start Reading</button>
+            <Link href={`/category/${EC.category}`}>
+            <button type="submit" className="py-2 mb-4 px-4 border border-transparent hover:cursor-pointer shadow-sm text-black bg-[#ffff] rounded-lg hover:bg-[#162739] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2">Start Reading</button></Link>
           </div>
         </motion.div>
       </motion.div>
@@ -416,7 +418,7 @@ console.log(articles);
     </div>
 
     {/* Categories Checkbox */}
-    <div className=" py-5">
+    <div className=" py-5 border-b-2">
    <h1 className="text-3xl">Categories</h1>
    <div className=" block">
             {
@@ -430,6 +432,28 @@ console.log(articles);
               ))
             }
    </div>
+    </div>
+    <div className=" block">
+      <span className=" text-3xl">Featured Blog</span>
+      <div>
+            <Link href={`/category/${EC.category}`}>
+              <button className="py-2 mb-4 px-4 border border-transparent shadow-sm text-white bg-[#9147FF] rounded-lg hover:bg-[#af7aff] focus:outline-none focus:ring-2 focus:ring-offset-2">{EC.category}</button>
+              </Link>
+            <div className=" flex">
+
+              <Image className="rounded-full" src={`/media/${EC.category}.jpg`} height="100" width='100' alt="don't care" />
+              <Link href={`/category/${EC.category}`}>
+              <h1 className="text-xl hover:text-purple-500">{eSports.title}</h1>
+              </Link>
+            </div>
+      </div>
+    </div>
+    <div className=" block text-3xl mt-4 leading-[60px] tracking-wider">
+      <span>Follow</span>
+      <Link href="https://wa.me/(+234)9160310791"><div className=" flex flex-row"><FaWhatsapp /><span className="flex hover:text-purple-500"> @byteprowler</span></div></Link>
+      <Link href="https://github.com/Ogojoshua905"><div className=" flex"><FaGithub /><span className="flex hover:text-purple-500">@byteprowler</span></div></Link>
+      <Link href="https://www.instagram.com/officialalgebra905/"><div className=" flex"><FaInstagram /><span className=" hover:text-purple-500">@byteprowler</span></div></Link>
+      <Link href="https://www.linkedin.com/in/ogo-joshua-9572832a4/"><div className=" flex"><FaLinkedin /><span className=" hover:text-purple-500">@byteprowler</span></div></Link>
     </div>
   </div>
 </div>

@@ -80,7 +80,7 @@ export default function Navbar() {
       
     <div className='dark:border-white flex items-center space-x-9'>
 
-            <Link className='p-2' href="/">
+            <Link className='p-2 hover:text-purple-500 transition-all' href="/">
               Home
             </Link>
            
@@ -89,13 +89,13 @@ export default function Navbar() {
 
        
             
-          <Link className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-yellow-500' href="/about">
+          <Link className='p-2 hover:text-purple-500 transition-all duration-500 ease-in-out ' href="/about">
             About
             </Link>
             
             
         
-          <Link className='p-2 hover:border-b-4 border-transparent border-b transition-colors duration-500 ease-in-out hover:border-blue-500' href="/category">
+          <Link className='p-2 transition-all duration-500 ease-in-out hover:text-purple-500' href="/category">
             Blog
             </Link>
             
@@ -121,7 +121,7 @@ export default function Navbar() {
                     transform: showFlyout ? "scaleX(1)" : "scale(0)",
                   }} className='absolute -bottom-2 -left-2 h-1 origin-left scale-x-0 rounded-full bg-indigo-300 transition-transform duration-300 ease-out'>
 
-                  <span >{dropCat}
+                  <span>{dropCat}
                   </span>
                   </span>
                 
@@ -132,7 +132,7 @@ export default function Navbar() {
           </div>
             
         
-          <Link className='p-2' href="/contact">
+          <Link className='p-2 hover:text-purple-500 transition-all ease-in-out' href="/contact">
             Contact
             </Link>
             
